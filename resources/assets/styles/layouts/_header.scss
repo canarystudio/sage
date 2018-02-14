@@ -1,0 +1,20 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+
+/*------------------------------------------------------------------------------
+  Banner styles
+------------------------------------------------------------------------------*/
+
+.banner-primary {
+  background-image: url('https://source.unsplash.com/random');
+  background-size: cover;
+  background-color: $gray-700;
+  background-blend-mode: multiply;
+  color: $white;
+}
