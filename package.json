@@ -22,6 +22,34 @@
     "android 4",
     "opera 12"
   ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source": null,
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extend",
+            "at-root",
+            "debug",
+            "warn",
+            "error",
+            "if",
+            "else",
+            "for",
+            "each",
+            "while",
+            "mixin",
+            "include",
+            "content",
+            "return",
+            "function"
+          ]
+        }
+      ]
+    }
+  },
   "scripts": {
     "build": "webpack --progress --config resources/assets/build/webpack.config.js",
     "build:production": "webpack --progress -p --config resources/assets/build/webpack.config.js",
@@ -53,14 +81,12 @@
     "extract-text-webpack-plugin": "~3.0.2",
     "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
-    "glob-all": "^3.1.0",
     "imagemin-mozjpeg": "~7.0.0",
     "imagemin-webpack-plugin": "~2.0.0",
     "import-glob": "~1.5",
     "node-sass": "~4.7.2",
     "postcss-loader": "~2.1.0",
     "postcss-safe-parser": "~3.0",
-    "purgecss-webpack-plugin": "^0.20.0",
     "resolve-url-loader": "~2.2.1",
     "rimraf": "~2.6",
     "sass-loader": "~6.0",
@@ -77,10 +103,9 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta",
-    "font-awesome": "~4.7",
-    "hamburgers": "^0.9.3",
+    "bootstrap": "v4.0.0",
     "jquery": "^3.3.1",
-    "popper.js": "~1.11"
+    "popper.js": "^1.12.9",
+    "run": "^1.4.0"
   }
 }
