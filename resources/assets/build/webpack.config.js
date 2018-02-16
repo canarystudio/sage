@@ -26,7 +26,7 @@ let webpackConfig = {
     version: false,
     timings: false,
     children: false,
-    errors: true,
+    errors: false,
     errorDetails: false,
     warnings: false,
     chunks: false,
@@ -171,10 +171,10 @@ let webpackConfig = {
         eslint: { failOnWarning: false, failOnError: true },
       },
     }),
-    // new StyleLintPlugin({
-    //   failOnError: !config.enabled.watcher,
-    //   syntax: 'scss',
-    // }),
+    new StyleLintPlugin({
+      failOnError: !config.enabled.watcher,
+      syntax: 'scss',
+    }),
     new FriendlyErrorsWebpackPlugin(),
   ],
 };
