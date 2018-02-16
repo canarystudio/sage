@@ -1,7 +1,7 @@
 {
   "name": "sage",
-  "version": "8.5.3",
-  "author": "Ben Word <ben@benword.com>",
+  "version": "9.0.0",
+  "author": "Roots <team@roots.io>",
   "homepage": "https://roots.io/sage/",
   "private": true,
   "repository": {
@@ -105,7 +105,6 @@
   "dependencies": {
     "bootstrap": "v4.0.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.12.9",
-    "run": "^1.4.0"
+    "popper.js": "^1.12.9"
   }
 }
