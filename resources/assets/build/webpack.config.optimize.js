@@ -17,3 +17,26 @@ module.exports = {
     }),
   ],
 };
+
+const glob = require('glob-all');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    // ... 
+    new PurgecssPlugin({
+      paths: glob.sync([
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        'resources/assets/scripts/**/*.js',
+      ]),
+      whitelist: [ // Only if you need it!
+        'pr3', 'pv2', 'ph3',
+        'mb1',
+        'input',
+        'tracked-mega',
+        'nav-link'
+      ],
+    }),
+  ],
+};
