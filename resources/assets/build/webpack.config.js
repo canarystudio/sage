@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const config = require('./config');
 
@@ -176,6 +177,7 @@ let webpackConfig = {
       syntax: 'scss',
     }),
     new FriendlyErrorsWebpackPlugin(),
+    new DashboardPlugin()
   ],
 };
 
