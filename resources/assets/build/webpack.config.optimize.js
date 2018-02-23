@@ -2,8 +2,9 @@
 
 const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
-
+const glob = require('glob-all');
 const config = require('./config');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 module.exports = {
   plugins: [
@@ -15,19 +16,12 @@ module.exports = {
       plugins: [imageminMozjpeg({ quality: 75 })],
       disable: (config.enabled.watcher),
     }),
-  ],
-};
-
-const glob = require('glob-all');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
-
-module.exports = {
-  plugins: [
-    // ... 
     new PurgecssPlugin({
       paths: glob.sync([
-        'app/**/*.php',
-        'resources/views/**/*.php',
+        '*.php',
+        'lib/*.php',
+        'views/**/*.php',
+        'views/partials/banner.php',
         'resources/assets/scripts/**/*.js',
       ]),
       whitelist: [ // Only if you need it!
@@ -35,7 +29,9 @@ module.exports = {
         'mb1',
         'input',
         'tracked-mega',
-        'nav-link'
+        'nav-link',
+        'banner-primary',
+        'footer-primary'
       ],
     }),
   ],
