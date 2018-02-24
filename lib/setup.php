@@ -102,5 +102,11 @@ function assets() {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  
+  // load slick per page template
+  if (is_page_template('views/home.php')) {
+      wp_enqueue_script('slick/js', Assets\asset_path('scripts/slick.min.js'), ['jquery'], null, true);
+  }
+
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

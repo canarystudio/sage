@@ -1,6 +1,7 @@
 /*------------------------------------------------------------------------------
   1. Bootstrap Variables
   2. Hamburger Variables
+  3. Slick Carousel
 ------------------------------------------------------------------------------*/
 
 
@@ -894,3 +895,26 @@ $hamburger-layer-border-radius: $navbar-toggler-border-radius !default;
 $hamburger-hover-opacity: 0.7 !default;
 $hamburger-hover-transition-duration: 0.15s !default;
 $hamburger-hover-transition-timing-function: linear !default;
+
+
+
+
+
+/*------------------------------------------------------------------------------
+  3. Slick Carousel
+------------------------------------------------------------------------------*/
+
+$slick-font-path: "./fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "./" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
