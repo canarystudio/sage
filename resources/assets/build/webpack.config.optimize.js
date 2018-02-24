@@ -16,23 +16,23 @@ module.exports = {
       plugins: [imageminMozjpeg({ quality: 75 })],
       disable: (config.enabled.watcher),
     }),
-    new PurgecssPlugin({
-      paths: glob.sync([
-        '*.php',
-        'lib/*.php',
-        'views/**/*.php',
-        'views/partials/banner.php',
-        'resources/assets/scripts/**/*.js',
-      ]),
-      whitelist: [ // Only if you need it!
-        'pr3', 'pv2', 'ph3',
-        'mb1',
-        'input',
-        'tracked-mega',
-        'nav-link',
-        'banner-primary',
-        'footer-primary'
-      ],
-    }),
+    // new PurgecssPlugin({
+    //   paths: glob.sync([
+    //     '*.php',
+    //     'lib/*.php',
+    //     'views/**/*.php',
+    //     'views/partials/banner.php',
+    //     'resources/assets/scripts/**/*.js',
+    //   ]),
+    //   whitelist: [ // Only if you need it!
+    //     'pr3', 'pv2', 'ph3',
+    //     'mb1',
+    //     'input',
+    //     'tracked-mega',
+    //     'nav-link',
+    //     'banner-primary',
+    //     'footer-primary'
+    //   ],
+    // }),
   ],
 };
