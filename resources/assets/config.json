@@ -4,6 +4,9 @@
       "./scripts/main.js",
       "./styles/main.scss"
     ],
+    "slick.min": [
+      "./scripts/vendor/slick.min.js"
+    ],
     "customizer": [
       "./scripts/customizer.js"
     ]

@@ -165,12 +165,12 @@ let webpackConfig = {
         context: config.paths.assets,
       },
     }),
-    new webpack.LoaderOptionsPlugin({
-      test: /\.js$/,
-      options: {
-        eslint: { failOnWarning: false, failOnError: true },
-      },
-    }),
+    // new webpack.LoaderOptionsPlugin({
+    //   test: /\.js$/,
+    //   options: {
+    //     eslint: { failOnWarning: false, failOnError: true },
+    //   },
+    // }),
     new StyleLintPlugin({
       failOnError: !config.enabled.watcher,
       emitErrors: true,

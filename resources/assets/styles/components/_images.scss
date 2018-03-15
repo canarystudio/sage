@@ -9,9 +9,11 @@ svg {
   overflow: visible;
   vertical-align: -.125em;
   fill: $primary; // add margin for buttons
+
   .btn & {
     margin-right: .5rem;
   }
+  
 }
 
 /*------------------------------------------------------------------------------
@@ -22,6 +24,7 @@ svg {
 $iconSizes:
   'sm' $font-size-sm,
   'lg' ($font-size-lg * 2),
+  'xl' ($font-size-lg * 4),
   'md' $font-size-base;
 
 @each $tuple in $iconSizes {
