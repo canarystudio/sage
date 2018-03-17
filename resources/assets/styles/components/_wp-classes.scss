@@ -54,3 +54,19 @@
   @extend .sr-only;
   @extend .sr-only-focusable;
 }
+
+
+/*------------------------------------------------------------------------------
+  WP search form
+------------------------------------------------------------------------------*/
+
+.search-field {
+  @extend .form-control;
+  @extend .form-control-lg;
+}
+
+.search-submit {
+  @extend .btn;
+  @extend .btn-lg;
+  @extend .btn-primary;
+}
