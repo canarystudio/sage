@@ -18,7 +18,7 @@ import 'bootstrap/js/src/modal.js';
 import 'bootstrap/js/src/scrollspy.js';
 import 'bootstrap/js/src/tab.js';
 // import 'bootstrap/js/src/tooltip.js';
-// import 'bootstrap/js/src/util.js';
+import 'bootstrap/js/src/util.js';
 
 
 // import local dependencies
