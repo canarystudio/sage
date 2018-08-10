@@ -7,19 +7,27 @@
 </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <?php
-    if (has_nav_menu('primary_navigation')) :
-      wp_nav_menu([
-        'menu'              => 'primary_navigation',
-        'theme_location'    => 'primary_navigation',
-        'depth'				=> 2, // 1 = with dropdowns, 0 = no dropdowns.
-        'container'			=> 'div',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
-        'menu_class'        => 'navbar-nav mr-auto mt-2 mt-lg-0',
-        'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
-        'walker'			=> new WP_Bootstrap_Navwalker()
-      ]);
+    /**
+     * Detect plugin. For use on Front End and Back End.
+     */
+    // check for plugin using plugin name
+    if(in_array('canary-wp-boostrap4-navwalker/canary-wp-boostrap4-navwalker.php', apply_filters('active_plugins', get_option('active_plugins')))){
+      if (has_nav_menu('primary_navigation')) :
+        wp_nav_menu([
+          'menu'              => 'primary_navigation',
+          'theme_location'    => 'primary_navigation',
+          'depth'				=> 2, // 1 = with dropdowns, 0 = no dropdowns.
+          'container'			=> 'div',
+          'container_class'   => 'collapse navbar-collapse',
+          'container_id'      => 'bs-example-navbar-collapse-1',
+          'menu_class'        => 'navbar-nav mr-auto mt-2 mt-lg-0',
+          'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+          'walker'			=> new WP_Bootstrap_Navwalker()
+        ]);
       endif;
+    } else {
+        echo "<script>console.log('Enable the navwalker plugin to display a menu.');</script>";
+    }
     ?>
   </div>
 </nav>
