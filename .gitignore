@@ -52,6 +52,7 @@ Thumbs.db
 *.sublime-workspace
 *.komodoproject
 *.codekit3
+*.map
 
 
 # ignore log files and databases
