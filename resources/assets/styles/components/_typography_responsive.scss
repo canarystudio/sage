@@ -1,0 +1,10 @@
+/*------------------------------------------------------------------------------
+  Responsive typography settings
+------------------------------------------------------------------------------*/
+
+// font sizes for mobile
+@include media-breakpoint-down(xs) {
+  html {
+    font-size: .8rem;
+  }
+}
