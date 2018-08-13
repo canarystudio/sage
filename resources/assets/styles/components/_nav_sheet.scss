@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------------------
+  Navbar at mobile
+------------------------------------------------------------------------------*/
+
+@include media-breakpoint-down(xs) {
+  .navbar-toggler {
+    z-index: 200;
+  }
+  .collapse {
+    position: fixed;
+    background: rgba(black,.9);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .navbar-nav {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 20vh;
+    left: 0;
+    font-size: 2rem;
+  }
+}

@@ -1,8 +1,6 @@
 <?php
-
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
-
 ?>
 
 <!doctype html>
@@ -18,7 +16,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('views/partials/header');
     ?>
-    <?php include Wrapper\template_path(); ?>
+    <div class="main"><?php include Wrapper\template_path(); ?></div>
     <?php
       do_action('get_footer');
       get_template_part('views/partials/footer');
