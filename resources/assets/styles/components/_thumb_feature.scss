@@ -1,0 +1,88 @@
+/*------------------------------------------------------------------------------
+  Feature thumbnail
+
+  Usage:
+
+  with background image:
+  <div class="feature-block text-light mb-3">
+    <div class="feature-block-content">
+      <div class="feature-block-text py-4 pl-4">
+        ...
+      </div>
+      <div class="feature-block-button p-2">
+        <a href="" class="btn-icon btn-more">...</a>
+      </div>
+    </div>
+    <div class="feature-block-bg" style="background-image: url('http://placehold.it/300x440');"></div>
+  </div>
+
+  with image on top:
+  <div class="feature-block bg-primary text-light mb-3">
+    <div class="feature-block-image"><img src="http://placehold.it/300x440" class="img-fluid"></div>
+    <div class="feature-block-content">
+      <div class="feature-block-text py-4 pl-4">
+        ...
+      </div>
+      <div class="feature-block-button p-2">
+        <a href="" class="btn-icon btn-more">...</a>
+      </div>
+    </div>
+  </div>
+------------------------------------------------------------------------------*/
+
+.feature-block,
+.feature-block-image {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.feature-block-content {
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+
+.feature-block-text {
+  margin-right: auto;
+}
+
+.feature-block-button {
+  align-self: flex-end;
+
+  > a {
+    display: block;
+  }
+}
+
+.feature-block-image {
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform .4s ease-in-out;
+  transform-origin: bottom center;
+
+  img {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  .feature-block:hover & {
+    transform: scale(1.02);
+  }
+
+}
+
+.feature-block-bg {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-size: cover;
+  transition: transform .4s ease-in-out;
+
+  .feature-block:hover & {
+    transform: scale(1.02);
+  }
+}

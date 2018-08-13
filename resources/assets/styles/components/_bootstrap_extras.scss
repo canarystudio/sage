@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+  Position utility additions
+------------------------------------------------------------------------------*/
+
+.position-sticky {
+  top: 0;
+}
+
+
+/*------------------------------------------------------------------------------
+  Container preferences
+------------------------------------------------------------------------------*/
+
+// add full gutter width outside of container-fluid
+.container-fluid {
+  padding-left: calc(#{$grid-gutter-width} + 10px);
+  padding-right: calc(#{$grid-gutter-width} + 10px);
+}
+
+
+/*------------------------------------------------------------------------------
+  Full width container breakout
+------------------------------------------------------------------------------*/
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
