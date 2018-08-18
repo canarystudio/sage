@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------------
+  Sponsor thumb list
+------------------------------------------------------------------------------*/
+
+.sponsor-group {
+  max-width: 60rem;
+  margin: auto;
+
+  + .sponsor-group {
+    margin-top: $spacer * 2;
+  }
+}
+
+.sponsor-group-title {
+  margin-bottom: 0;
+}
+
+.sponsor-thumb {
+  max-width: 12rem;
+  min-width: 12rem;
+  margin-top: $spacer;
+
+  img {
+    padding-left: $spacer;
+    padding-right: $spacer;
+    max-width: 12rem;
+    max-height: 8rem;
+  }
+}
