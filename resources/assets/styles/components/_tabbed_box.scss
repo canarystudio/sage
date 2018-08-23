@@ -1,0 +1,28 @@
+/*------------------------------------------------------------------------------
+  Tabbed box
+------------------------------------------------------------------------------*/
+
+.tabbed-box {
+
+  .nav-link {
+    background-color: $primary;
+    color: $white;
+    max-width: calc(100% - 1rem);
+  }
+
+  .nav-link.active {
+    position: relative;
+
+    &:after {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12.7 6.85'%3e%3cdefs%3e%3cstyle%3e .a %7b fill: %2302c9ff;%7d %3c/style%3e%3c/defs%3e%3ctitle%3eAsset 2%3c/title%3e%3cpath class='a' d='M0,.8.7.1,6.3,5.7,12,0l.7.7-6,6a.48.48,0,0,1-.7,0Z'/%3e%3c/svg%3e ");
+      content: '';
+      background-size: 1rem 1rem;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      bottom: -1.5rem;
+      color: $secondary;
+      left: calc(50% - .5rem);
+    }
+  }
+}

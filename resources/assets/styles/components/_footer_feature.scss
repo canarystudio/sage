@@ -1,15 +1,10 @@
 /*------------------------------------------------------------------------------
-  1. sticky footer
+  Footer feature
 ------------------------------------------------------------------------------*/
 
-// 1. setup sticky footer
-body {
-  overflow-x: hidden;
-  min-height: 100vh;
-  flex-direction: column;
-  display: flex;
-}
-
-.main {
-  flex: 1;
+.footer-feature {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 30%;
 }

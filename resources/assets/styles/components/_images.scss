@@ -59,3 +59,14 @@ $iconColors:
 .img-fluid {
   width: 100%;
 }
+
+/*------------------------------------------------------------------------------
+  Full width featured images
+  <div class="py-7 full-width-image" style="background-image: url('https://www.swissotel.com/assets/0/92/2119/3396/3435/3437/4719/0f9657e8-5c23-49ed-82ab-6514684e1fbe.jpg');">
+  </div>
+------------------------------------------------------------------------------*/
+
+.full-width-image {
+  min-height: 50vh;
+  background-position: 50% 50%;
+}

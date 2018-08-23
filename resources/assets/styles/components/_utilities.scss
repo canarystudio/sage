@@ -1,17 +1,22 @@
 /*------------------------------------------------------------------------------
-  Position utility additions
+  Text column utility
 ------------------------------------------------------------------------------*/
+.text-col-2 {
+  column-count: 2;
+  column-gap: $grid-gutter-width * 2;
 
-.position-sticky {
-  top: 0;
+  li {
+    break-inside: avoid-column;
+  }
 }
 
 /*------------------------------------------------------------------------------
-  Container preferences
+  Full width container breakout
 ------------------------------------------------------------------------------*/
 
-// add full gutter width outside of container-fluid
-.container-fluid {
-  padding-left: calc(#{$grid-gutter-width} + 10px);
-  padding-right: calc(#{$grid-gutter-width} + 10px);
+.full-width {
+  margin-left: -100%;
+  margin-right: -100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }

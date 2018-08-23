@@ -1,15 +1,16 @@
 /*------------------------------------------------------------------------------
-  1. sticky footer
+  Z Index utility additions
 ------------------------------------------------------------------------------*/
 
-// 1. setup sticky footer
-body {
-  overflow-x: hidden;
-  min-height: 100vh;
-  flex-direction: column;
-  display: flex;
+.z-10 {
+  z-index: 10;
 }
-
-.main {
-  flex: 1;
+.z-100 {
+  z-index: 100;
+}
+.z-1000 {
+  z-index: 1000;
+}
+.z-10000 {
+  z-index: 10000;
 }

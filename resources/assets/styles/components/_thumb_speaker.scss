@@ -10,3 +10,12 @@
     right: $spacer / 2;
   }
 }
+
+// make full width if inside slick
+  .slick-slide .speaker-block {
+    max-width: 100%;
+
+    > div {
+      width: 100%;
+    }
+  }
