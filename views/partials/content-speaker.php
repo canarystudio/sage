@@ -15,9 +15,8 @@
         // now, we'll exctract the image URL from $image_object
         $image_url = $image_object['sizes'][$image_size];
       ?>
-      <a href="<?php the_permalink(); ?>">
-        <img class="img-fluid" src="<?php echo $image_url; ?>" alt="<?php the_field(speaker_first_name); ?> <?php the_field(speaker_last_name); ?>">
-      </a>
+      <img class="img-fluid" src="<?php echo $image_url; ?>" alt="<?php the_field(speaker_first_name); ?> <?php the_field(speaker_last_name); ?>">
+
       <?php
         } else {
       ?>
