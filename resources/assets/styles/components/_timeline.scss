@@ -4,9 +4,14 @@
 
 .timeline {
   position: relative;
-  @media only screen and (min-width: 768px) {
+  max-width: 80vw;
+
+  @include media-breakpoint-up(sm) {
     margin: auto;
     max-width: 60vw;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-left: $grid-gutter-width;
   }
 }
 
@@ -19,6 +24,7 @@
   height: 100%;
   width: 3px;
   background: $secondary;
+
 }
 
 @media only screen and (min-width: 1170px) {
@@ -68,6 +74,10 @@
   border-radius: 50%;
   border: 3px solid $secondary;
   background: $white;
+
+  @include media-breakpoint-down(xs) {
+    left: calc(-$grid-gutter-width / 1.4)
+  }
 }
 
 @media only screen and (min-width: 1170px) {
@@ -85,6 +95,10 @@
 .timeline-content {
   position: relative;
   min-height: 50px;
+
+  @include media-breakpoint-down(xs) {
+    margin-left: $grid-gutter-width;
+  }
 }
 
 .timeline-content:after {
