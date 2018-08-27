@@ -27,7 +27,7 @@
       <?php }; ?>
 
       <div class="p-3 mr-auto">
-        <p class="lead">
+        <p class="speaker-name">
           <a href="<?php the_permalink(); ?>">
           <?php if (get_field('speaker_title', $speaker)) { ?>
           <?php the_field('speaker_title', $speaker); ?>
@@ -40,12 +40,14 @@
           <?php }; ?>
           </a>
           <?php if ( get_field('speaker_position', $speaker) ) : ?>
-          <br>
+          <small class="speaker-position">
           <?php echo get_field('speaker_position', $speaker); ?>
+          </small>
           <?php endif; ?>
           <?php if (get_field('speaker_organisation_affiliation', $speaker)) { ?>
-          <br>
+          <small class="speaker-organisation">
           <?php the_field('speaker_organisation_affiliation', $speaker); ?>
+          </small>
           <?php }; ?>
 
         </p>
