@@ -4,6 +4,10 @@
 
 .timeline {
   position: relative;
+  @media only screen and (min-width: 768px) {
+    margin: auto;
+    max-width: 60vw;
+  }
 }
 
 .timeline::before {
@@ -97,7 +101,7 @@
 .timeline-heading {
   font-weight: $font-weight-bold;
   font-family: $headings-font-family;
-  color: $primary;
+  color: $info;
 }
 
 .timeline-heading,
