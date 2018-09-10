@@ -5,13 +5,29 @@ svg {
   display: inline-block;
   font-size: inherit;
   height: 1em;
-  width: auto;
   overflow: visible;
   vertical-align: -.125em;
-  fill: $primary; // add margin for buttons
+  fill: currentColor;
 
   .btn & {
     margin-right: .5rem;
+  }
+
+  // icons in wp menu
+  .navbar-nav > li > a > & {
+    margin-right: .5rem;
+    top: 0.2em;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  // icons in wp menu - dropdown
+  .dropdown-menu & {
+    height: 2em;
+    margin-bottom: -1em;
+    margin-top: -1em;
+    margin-right: 1rem;
+    opacity: .5;
   }
 }
 
