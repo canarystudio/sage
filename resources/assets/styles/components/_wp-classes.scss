@@ -55,7 +55,6 @@
   @extend .sr-only-focusable;
 }
 
-
 /*------------------------------------------------------------------------------
   WP search form
 ------------------------------------------------------------------------------*/
@@ -69,4 +68,16 @@
   @extend .btn;
   @extend .btn-lg;
   @extend .btn-primary;
+}
+
+/*------------------------------------------------------------------------------
+  Responsive embeds
+------------------------------------------------------------------------------*/
+.entry-content-asset {
+  @extend .embed-responsive;
+  @extend .embed-responsive-16by9;
+}
+
+.embed-responsive-item {
+  @extend .embed-responsive-item;
 }
