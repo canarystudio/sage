@@ -40,31 +40,12 @@ $iconSizes:
   'sm' $font-size-sm,
   'lg' ($font-size-lg * 2),
   'xl' ($font-size-lg * 4),
+  'xxl' ($font-size-lg * 10),
   'md' $font-size-base;
 
 @each $tuple in $iconSizes {
   .icon-#{nth($tuple, 1)} svg {
     font-size: nth($tuple, 2);
-  }
-}
-
-$iconColors:
-  'blue' $blue,
-  'indigo' $indigo,
-  'purple' $purple,
-  'pink' $pink,
-  'red' $red,
-  'orange' $orange,
-  'yellow' $yellow,
-  'green' $green,
-  'teal' $teal,
-  'cyan' $cyan,
-  'white' $white,
-  'black' $black;
-
-@each $tuple in $iconColors {
-  .icon-#{nth($tuple, 1)} svg {
-    fill: nth($tuple, 2);
   }
 }
 

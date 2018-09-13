@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------------------
+  content rows
+------------------------------------------------------------------------------*/
+
+.content-row {
+  &.bg-white {
+    + .bg-white {
+      padding-top: 0 !important;
+    }
+  }
+  &.bg-light {
+    + .bg-light {
+      padding-top: 0 !important;
+    }
+  }
+  &.bg-primary {
+    + .bg-primary {
+      padding-top: 0 !important;
+    }
+  }
+  &.bg-secondary {
+    + .bg-secondary {
+      padding-top: 0 !important;
+    }
+  }
+}

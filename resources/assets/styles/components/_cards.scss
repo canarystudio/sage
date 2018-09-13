@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------------------
+  card columns
+------------------------------------------------------------------------------*/
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.card-columns-2 {
+  column-count: 2;
+}
+
+/*------------------------------------------------------------------------------
+  card buttons
+------------------------------------------------------------------------------*/
+.card-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.card-title:last-child,
+.card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.card-body {
+  z-index: 10;
+  position: relative;
+}
+
+.card-button + .card-body {
+
+}
+
+.card {
+  overflow: hidden;
+
+  img {
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform .4s ease-in-out;
+    transform-origin: bottom center;
+  }
+  &:hover img {
+    transform: scale(1.02)
+    translate3d(0px, 0px, 0px);
+  }
+
+}
+
+.card-img-overlay {
+  background-size: cover;
+  transition: transform .4s ease-in-out;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  .card:hover & {
+    transform: scale(1.02);
+  }
+}
+
+.column-span-all {
+  column-span: all;
+  display: block !important;
+}
+@supports not (column-span: all) {
+  .column-span-all {
+   position: absolute;
+   top:0;right:0;left:0;
+  }
+}
