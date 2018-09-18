@@ -1,4 +1,4 @@
-<?php if ( get_field('speaker_bio', $speaker) ) : ?>
+<?php if (get_field('speaker_bio', $speaker)) { ?>
 <div class="modal mo fade bd-example-modal-sm-<?php echo $post->ID; ?>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -39,3 +39,4 @@
   </div>
 </div>
 <?php endif; ?>
+<?php }; ?>
