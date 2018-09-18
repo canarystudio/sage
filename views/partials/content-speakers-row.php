@@ -47,7 +47,6 @@
     if ( $speaker_query->have_posts() ) {
   ?>
   <!-- speakers list -->
-
   <div class="card-deck carousel-speaker" data-slick='{"slidesToShow": <?php echo get_sub_field('speaker_row_slides'); ?>, "slidesToScroll": <?php echo get_sub_field('speaker_row_slides'); ?>}'>
   <?php
     while($speaker_query->have_posts()) : $speaker_query->the_post();
@@ -56,6 +55,12 @@
     wp_reset_postdata();
   ?>
   </div>
+  <?php
+    while($speaker_query->have_posts()) : $speaker_query->the_post();
+    get_template_part('views/partials/content-speaker-modal');
+    endwhile;
+    wp_reset_postdata();
+  ?>
   <?php }; ?>
 
   <?php if( get_sub_field('speakers_carousel_content_after') ) : ?>

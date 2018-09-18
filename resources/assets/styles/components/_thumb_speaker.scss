@@ -2,9 +2,10 @@
   Speaker thumbnail
 ------------------------------------------------------------------------------*/
 
-.speaker-block {
+.card-speaker {
 
-  .btn-icon {
+  .btn-icon,
+  .card-button {
     position: absolute;
     bottom: $spacer / 2;
     right: $spacer / 2;
@@ -12,7 +13,7 @@
 }
 
 // make full width if inside slick
-  .slick-slide .speaker-block {
+  .slick-slide .card-speaker {
     max-width: 100%;
 
     > div {

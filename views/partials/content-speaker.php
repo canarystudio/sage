@@ -3,7 +3,7 @@
   if(in_array('cw-presentation-plugin/presentation-plugin.php', apply_filters('active_plugins', get_option('active_plugins')))){
 ?>
 
-  <div class="card">
+  <div class="card card-speaker">
   <?php if (get_field('speaker_image', $speaker)) { ?>
     <?php
       // first, get the image object returned by ACF
@@ -22,22 +22,14 @@
 
     <?php if (get_field('speaker_bio', $speaker)) { ?>
 
-    <?php // @TODO place somewhere it renders, feed in ajax ?>
-    <div class="modal fade bd-example-modal-sm-<?php echo $post->ID; ?>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-
-        </div>
-      </div>
-    </div>
-
-    <a class="card-button m-2 btn-icon btn-enlarge" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
+    <a class="card-button btn-icon btn-enlarge" href="http://google.com/?ajax=true" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
 
     <?php }; ?>
 
     <div class="card-body">
       <p class="speaker-name">
         <a href="<?php the_permalink(); ?>">
+        <span class="h5">
         <?php if (get_field('speaker_title', $speaker)) { ?>
         <?php the_field('speaker_title', $speaker); ?>
         <?php }; ?>
@@ -47,16 +39,17 @@
         <?php if (get_field('speaker_last_name', $speaker)) { ?>
         <?php the_field('speaker_last_name', $speaker); ?>
         <?php }; ?>
+        </span>
         </a>
         <?php if ( get_field('speaker_position', $speaker) ) : ?>
-        <small class="speaker-position">
+        <span class="speaker-position">
         <?php echo get_field('speaker_position', $speaker); ?>
-        </small>
+        </span>
         <?php endif; ?>
         <?php if (get_field('speaker_organisation_affiliation', $speaker)) { ?>
-        <small class="speaker-organisation">
+        <span class="speaker-organisation">
         <?php the_field('speaker_organisation_affiliation', $speaker); ?>
-        </small>
+        </span>
         <?php }; ?>
       </p>
     </div>
