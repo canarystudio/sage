@@ -55,13 +55,17 @@
     wp_reset_postdata();
   ?>
   </div>
+  <?php }; ?>
   <?php
-    while($speaker_query->have_posts()) : $speaker_query->the_post();
+    $modal_args = array(
+      'post_type'   => 'speakers',
+    );
+    $speaker_query_modal = new WP_Query( $modal_args );
+    while($speaker_query_modal->have_posts()) : $speaker_query_modal->the_post();
     get_template_part('views/partials/content-speaker-modal');
     endwhile;
     wp_reset_postdata();
   ?>
-  <?php }; ?>
 
   <?php if( get_sub_field('speakers_carousel_content_after') ) : ?>
     <?php echo get_sub_field('speakers_carousel_content_after'); ?>
