@@ -56,6 +56,10 @@
   ?>
   </div>
   <?php }; ?>
+
+  <script>
+    console.log('before');
+  </script>
   <?php
     $modal_args = array(
       'post_type'   => 'speakers',
@@ -66,6 +70,9 @@
     endwhile;
     wp_reset_postdata();
   ?>
+  <script>
+    console.log('after');
+  </script>
 
   <?php if( get_sub_field('speakers_carousel_content_after') ) : ?>
     <?php echo get_sub_field('speakers_carousel_content_after'); ?>

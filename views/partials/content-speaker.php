@@ -20,7 +20,7 @@
       No Image
     <?php }; ?>
 
-    <?php if (get_field('speaker_bio', $speaker)) { ?>
+    <?php if (get_field('speaker_bio')) { ?>
     <a class="card-button btn-icon btn-enlarge" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
     <?php }; ?>
 
