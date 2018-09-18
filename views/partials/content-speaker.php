@@ -22,7 +22,7 @@
 
     <?php if (get_field('speaker_bio', $speaker)) { ?>
 
-    <a class="card-button btn-icon btn-enlarge" href="http://google.com/?ajax=true" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
+    <a class="card-button btn-icon btn-enlarge" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
 
     <?php }; ?>
 
