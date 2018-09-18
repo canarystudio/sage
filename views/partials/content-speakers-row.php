@@ -20,61 +20,57 @@
 ">
 
   <?php if ( get_sub_field('speaker_row_size') == 'contained' ) { ?>
-    <div class="container">
-  <?php }; ?>
+  <div class="container">
+    <?php }; ?>
 
-  <?php if( get_sub_field('speakers_carousel_content_before') ) : ?>
+    <?php if( get_sub_field('speakers_carousel_content_before') ) : ?>
     <?php echo get_sub_field('speakers_carousel_content_before'); ?>
-  <?php endif; ?>
+    <?php endif; ?>
 
-  <?php
-    $speaker_order = get_field('event_speaker_order', 'option');
+    <?php
+      $speaker_order = get_field('event_speaker_order', 'option');
 
-    if ( get_field('event_speaker_order', 'option') && ( $speaker_order != 'custom' ) ) {
-      $args = array(
-        'post_type'   => 'speakers',
-        'meta_key'	  => $speaker_order,
-        'orderby'			=> 'meta_value',
-        'order' => 'ASC',
-      );
-    } else {
-      $args = array(
-        'post_type'   => 'speakers',
-      );
-    }
+      if ( get_field('event_speaker_order', 'option') && ( $speaker_order != 'custom' ) ) {
+        $args = array(
+          'post_type'   => 'speakers',
+          'meta_key'	  => $speaker_order,
+          'orderby'			=> 'meta_value',
+          'order' => 'ASC',
+        );
+      } else {
+        $args = array(
+          'post_type'   => 'speakers',
+        );
+      }
 
-    $speaker_query = new WP_Query( $args );
-    if ( $speaker_query->have_posts() ) {
-  ?>
-
-  <?php
-    $modal_args = array(
-      'post_type'   => 'speakers',
-    );
-    $speaker_query_modal = new WP_Query( $modal_args );
-    while($speaker_query_modal->have_posts()) : $speaker_query_modal->the_post();
-    get_template_part('views/partials/content-speaker-modal');
-    endwhile;
-    wp_reset_postdata();
-  ?>
-
-  <!-- speakers list -->
-  <div class="card-deck carousel-speaker" data-slick='{"slidesToShow": <?php echo get_sub_field('speaker_row_slides'); ?>, "slidesToScroll": <?php echo get_sub_field('speaker_row_slides'); ?>}'>
-  <?php
+      $speaker_query = new WP_Query( $args );
+      if ( $speaker_query->have_posts() ) {
+    ?>
+    <!-- speakers list -->
+    <div class="card-deck carousel-speaker" data-slick='{"slidesToShow": <?php echo get_sub_field('
+      speaker_row_slides'); ?>, "slidesToScroll":
+      <?php echo get_sub_field('speaker_row_slides'); ?>}'>
+      <?php
     while($speaker_query->have_posts()) : $speaker_query->the_post();
     get_template_part('views/partials/content-speaker');
     endwhile;
     wp_reset_postdata();
-  ?>
-  </div>
-  <?php }; ?>
-
-  <?php if( get_sub_field('speakers_carousel_content_after') ) : ?>
-    <?php echo get_sub_field('speakers_carousel_content_after'); ?>
-  <?php endif; ?>
-
-  <?php if ( get_sub_field('speaker_row_size') == 'contained' ) { ?>
+    ?>
     </div>
+    <?php
+    while($speaker_query->have_posts()) : $speaker_query->the_post();
+    get_template_part('views/partials/content-speaker-modal');
+    endwhile;
+    wp_reset_postdata();
+    ?>
+    <?php }; ?>
+
+    <?php if( get_sub_field('speakers_carousel_content_after') ) : ?>
+    <?php echo get_sub_field('speakers_carousel_content_after'); ?>
+    <?php endif; ?>
+
+    <?php if ( get_sub_field('speaker_row_size') == 'contained' ) { ?>
+  </div>
   <?php }; ?>
 
 </section>
