@@ -21,9 +21,7 @@
     <?php }; ?>
 
     <?php if (get_field('speaker_bio', $speaker)) { ?>
-
     <a class="card-button btn-icon btn-enlarge" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
-
     <?php }; ?>
 
     <div class="card-body">
@@ -59,11 +57,9 @@
   } else {
     // show error in console
   ?>
-    <div>
-      <script>
-        console.log('Enable the presentations plugin to display speakers.');
-      </script>
-    </div>
-    <?php
+  <script>
+    console.error('Enable the presentations plugin to display speakers.');
+  </script>
+  <?php
   }
 ?>
