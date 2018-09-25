@@ -17,7 +17,7 @@
     <?php
       } else {
     ?>
-      No Image
+
     <?php }; ?>
 
     <?php if (get_field('speaker_bio')) { ?>

@@ -52,14 +52,14 @@
       <?php echo get_sub_field('speaker_row_slides'); ?>}'>
       <?php
     while($speaker_query->have_posts()) : $speaker_query->the_post();
-    get_template_part('views/partials/content-speaker');
+    get_template_part('views/partials/content-speakers');
     endwhile;
     wp_reset_postdata();
     ?>
     </div>
     <?php
     while($speaker_query->have_posts()) : $speaker_query->the_post();
-    get_template_part('views/partials/content-speaker-modal');
+    get_template_part('views/partials/content-speakers-modal');
     endwhile;
     wp_reset_postdata();
     ?>
