@@ -24,26 +24,29 @@
     </h1>
 
     <p class="mt-0 mb-4">
+    <?php if( get_field('event_dates_nice', 'option') ) { ?>
+      <?php echo get_field('event_dates_nice', 'option'); ?>
+    <?php } else { ?>
 
-      <?php if( have_rows('event_dates', 'option') ): while( have_rows('event_dates', 'option') ): the_row();?>
+    <?php if( have_rows('event_dates', 'option') ): while( have_rows('event_dates', 'option') ): the_row();?>
 
-      <?php if ( get_sub_field('event_date_start') ) : ?>
+    <?php if ( get_sub_field('event_date_start') ) : ?>
       <?php echo get_sub_field('event_date_start'); ?>
-      <?php endif; ?>
+    <?php endif; ?>
 
-      <?php if ( get_sub_field('event_date_end') ) : ?>
-      –
-      <?php echo get_sub_field('event_date_end'); ?>
-      <?php endif; ?>
+    <?php if ( get_sub_field('event_date_end') ) : ?>
+      – <?php echo get_sub_field('event_date_end'); ?>
+    <?php endif; ?>
 
-      <?php endwhile; ?>
-      <?php endif; ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
 
+    <?php }; ?>
 
-      <?php if ( get_field('event_venue', 'option') ) : ?>
-      &nbsp;/&nbsp;
+    <?php if ( get_field('event_venue', 'option') ) : ?>
+      &nbsp;&middot;&nbsp;
       <?php echo get_field('event_venue', 'option'); ?>
-      <?php endif; ?>
+    <?php endif; ?>
 
     </p>
 

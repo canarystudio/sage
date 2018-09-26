@@ -22,6 +22,12 @@
     </h1>
     <p class="mb-4 animated animated-slow fadeIn wow" data-wow-delay=".6s">
 
+    <?php if( get_field('event_dates_nice', 'option') ) { ?>
+
+    <?php echo get_field('event_dates_nice', 'option'); ?>
+
+    <?php } else { ?>
+
     <?php if( have_rows('event_dates', 'option') ): while( have_rows('event_dates', 'option') ): the_row();?>
 
     <?php if ( get_sub_field('event_date_start') ) : ?>
@@ -35,9 +41,10 @@
     <?php endwhile; ?>
     <?php endif; ?>
 
+    <?php }; ?>
 
     <?php if ( get_field('event_venue', 'option') ) : ?>
-      &nbsp;/&nbsp;
+      &nbsp;&middot;&nbsp;
       <?php echo get_field('event_venue', 'option'); ?>
     <?php endif; ?>
 
