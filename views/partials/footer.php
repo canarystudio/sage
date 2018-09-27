@@ -1,3 +1,3 @@
-<footer class="footer-primary bg-light py-5">
+<footer class="footer-primary py-5">
   <?php dynamic_sidebar('sidebar-primary'); ?>
 </footer>

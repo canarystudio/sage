@@ -41,10 +41,12 @@
         </a>
         <?php if ( get_field('speaker_position', $speaker) ) : ?>
         <span class="speaker-position">
+        <br>
         <?php echo get_field('speaker_position', $speaker); ?>
         </span>
         <?php endif; ?>
         <?php if (get_field('speaker_organisation_affiliation', $speaker)) { ?>
+        <br>
         <span class="speaker-organisation">
         <?php the_field('speaker_organisation_affiliation', $speaker); ?>
         </span>
