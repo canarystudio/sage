@@ -9,6 +9,7 @@
   <div class="container-fluid">
   <?php get_template_part('views/partials/content', 'tab-box-row'); ?>
   <?php get_template_part('views/partials/content', 'speakers-row'); ?>
+  <?php get_template_part('views/partials/content', 'sponsors-row'); ?>
   <?php get_template_part('views/partials/content', 'carousel'); ?>
   <?php get_template_part('views/partials/content', 'generic-row'); ?>
   <?php get_template_part('views/partials/content', 'feature-blocks'); ?>
