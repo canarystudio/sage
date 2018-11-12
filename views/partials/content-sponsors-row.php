@@ -41,7 +41,7 @@
         if (($cat->count != '0') && ($cat->name != 'Uncategorized')) :
     ?>
     <h4 class="sponsor-category-title mt-5"><?php echo $cat->name; ?></h4>
-    <div class="row align-items-center list-sponsor">
+    <div class="row justify-content-center list-sponsor">
 
     <?php
       // loop sponsors that belong to category
