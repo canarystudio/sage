@@ -1,6 +1,6 @@
 <?php
   // check for cw presentation plugin
-  if(in_array('cw-presentation-plugin/presentation-plugin.php', apply_filters('active_plugins', get_option('active_plugins')))){
+  if(in_array('cw-presentation-plugin-v2/presentation-plugin.php', apply_filters('active_plugins', get_option('active_plugins')))){
 ?>
 
 
