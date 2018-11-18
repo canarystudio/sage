@@ -11,7 +11,8 @@
   }
 }
 
-.sponsor-group-title {
+.sponsor-group-title,
+.sponsor-category-title {
   margin-bottom: 0;
 }
 
@@ -25,5 +26,16 @@
     padding-right: $spacer;
     max-width: 12rem;
     max-height: 8rem;
+  }
+}
+
+// v2
+
+.list-sponsor {
+  flex-wrap: wrap;
+
+  > div {
+    flex: 0 1 auto;
+    width: 9rem;
   }
 }

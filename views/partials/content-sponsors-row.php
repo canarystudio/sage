@@ -52,7 +52,7 @@
       $catlabel = $cat->name;
     ?>
 
-    <div class="col p-3" style="max-width: 25%;">
+    <div class="col p-3">
       <?php
         get_template_part('views/partials/content-sponsors');
       ?>
@@ -69,4 +69,7 @@
   <?php }; ?>
 
 </section>
-<?php }; ?>
+<?php
+  };
+  wp_reset_postdata();
+?>
