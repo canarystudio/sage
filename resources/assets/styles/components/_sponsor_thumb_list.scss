@@ -118,8 +118,8 @@
     margin-top: 2rem;
   }
   .card {
-    flex-basis: 24% !important;
-    max-width: 24%;
+    flex-basis: 30% !important;
+    max-width: 30%;
     margin: ($grid-gutter-width /4) ($grid-gutter-width /4);
     a {
       height: 5vw;
@@ -141,10 +141,10 @@
     }
 
     &.sponsor-small {
-      flex-basis: 18% !important;
-      max-width: 18%;
+      flex-basis: 21% !important;
+      max-width: 21%;
       a {
-        height: 4vw;
+        height: 4.5vw;
       }
     }
   }
