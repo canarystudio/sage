@@ -17,7 +17,7 @@
       <a href="<?php echo get_field('sponsors_url'); ?>" target="_blank">
     <?php endif; ?>
 
-    <img class="card-img" src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
+    <img class="card-img-top" src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
 
     <?php if ( get_field('sponsors_url') ) : ?>
       </a>
