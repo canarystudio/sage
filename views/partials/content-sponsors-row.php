@@ -40,7 +40,7 @@
       foreach($categories as $cat) :
         if (($cat->count != '0') && ($cat->name != 'Uncategorized')) :
     ?>
-    <h4 class="sponsor-category-title mt-5"><?php echo $cat->name; ?></h4>
+    <h5 class="sponsor-category-title mt-8"><?php echo $cat->name; ?></h5>
     <div class="row justify-content-center list-sponsor">
 
     <?php
@@ -52,7 +52,7 @@
       $catlabel = $cat->name;
     ?>
 
-    <div class="col p-3">
+    <div class="col<?php if ( get_field('sponsors_size') ) : echo ' sponsor-' . get_field('sponsors_size'); endif; ?>">
       <?php
         get_template_part('views/partials/content-sponsors');
       ?>

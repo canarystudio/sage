@@ -36,6 +36,43 @@
 
   > div {
     flex: 0 1 auto;
-    width: 9rem;
+    margin-top: $spacer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 18rem;
+    min-width: 18rem;
+
+    img {
+      padding: $spacer ($spacer / 2);
+      max-width: 16rem;
+      max-height: 10rem;
+      min-width: 16rem;
+      min-height: 10rem;
+    }
+
+    // sponsors marked as large
+    &.sponsor-large {
+      max-width: 28rem;
+
+      img {
+        max-width: 28rem;
+        max-height: 18rem;
+        min-width: 28rem;
+        min-height: 18rem;
+      }
+    }
+
+    // sponsors marked as small
+    &.sponsor-small {
+      max-width: 10rem;
+
+      img {
+        max-width: 10rem;
+        max-height: 6rem;
+        min-width: 10rem;
+        min-height: 6rem;
+      }
+    }
   }
 }
