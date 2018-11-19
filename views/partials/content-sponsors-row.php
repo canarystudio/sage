@@ -27,6 +27,8 @@
     <?php echo get_sub_field('sponsors_carousel_content_before'); ?>
     <?php endif; ?>
 
+    <div class="sponsor-list-template">
+
     <?php
       wp_reset_postdata();
 
@@ -40,8 +42,8 @@
       foreach($categories as $cat) :
         if (($cat->count != '0') && ($cat->name != 'Uncategorized')) :
     ?>
-    <h5 class="sponsor-category-title mt-8"><?php echo $cat->name; ?></h5>
-    <div class="row justify-content-center list-sponsor">
+    <h5 class="sponsor-category-title"><?php echo $cat->name; ?></h5>
+    <div class="card-deck list-sponsor">
 
     <?php
       // loop sponsors that belong to category
@@ -52,7 +54,7 @@
       $catlabel = $cat->name;
     ?>
 
-    <div class="col<?php if ( get_field('sponsors_size') ) : echo ' sponsor-' . get_field('sponsors_size'); endif; ?>">
+    <div class="card <?php if ( get_field('sponsors_size') ) : echo ' sponsor-' . get_field('sponsors_size'); endif; ?>">
       <?php
         get_template_part('views/partials/content-sponsors');
       ?>
@@ -63,6 +65,8 @@
     </div>
     <?php endif;
     endforeach; ?>
+
+    </div>
 
     <?php if ( get_sub_field('sponsors_row_size') == 'contained' ) { ?>
   </div>
