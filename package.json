@@ -1,0 +1,20 @@
+{
+  "name": "canary-parent-bootstrap4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1",
+    "bootstrap": "^4.1.3",
+    "hamburgers": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
