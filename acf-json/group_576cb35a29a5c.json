@@ -1,0 +1,190 @@
+{
+    "key": "group_576cb35a29a5c",
+    "title": "Presentations",
+    "fields": [
+        {
+            "key": "field_53bc07a7f9111",
+            "label": "Abstract Text",
+            "name": "presentation_abstract_text",
+            "type": "textarea",
+            "instructions": "250 words maximum",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_53bea501ddaaa",
+            "label": "Primary Speaker",
+            "name": "presentation_primary_speaker",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "post_type": [
+                "speakers"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "max": 1,
+            "min": 0,
+            "elements": [
+                "post_type"
+            ]
+        },
+        {
+            "key": "field_53bc0edb98904",
+            "label": "Speakers",
+            "name": "presentation_speakers",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "post_type": [
+                "speakers"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "max": "",
+            "min": 0,
+            "elements": [
+                "post_type"
+            ]
+        },
+        {
+            "key": "field_53bc0712f9110",
+            "label": "Presentation Type",
+            "name": "presentation_type",
+            "type": "radio",
+            "instructions": "Please choose the type of presentation:",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53bc07dcf9112",
+                        "operator": "==",
+                        "value": "attachment"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "paper_presentation": "Paper Presentation",
+                "rapid_poster": "Five Minute Rapid Poster Presentation",
+                "paper_or_rapid_poster": "Paper Presentation or Five Minute Rapid Poster Presentation",
+                "panel": "Panel"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5583b76552a78",
+            "label": "Panel?",
+            "name": "panel",
+            "type": "true_false",
+            "instructions": "If checked, this will show as a 'panel' and the primary speaker will be marked as 'facilitator'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_56fdeb9482c10",
+            "label": "Co-Presenters?",
+            "name": "co_presenters",
+            "type": "true_false",
+            "instructions": "If checked, this will show all speakers (primary and secondary) on the program table.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5aa71ab5b962b",
+            "label": "E-Poster",
+            "name": "e_poster",
+            "type": "true_false",
+            "instructions": "If checked, this will not show on the abstract list.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "presentations"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1541716125
+}
