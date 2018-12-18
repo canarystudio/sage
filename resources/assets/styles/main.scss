@@ -46,6 +46,36 @@
 // Import Gravity
 @import "vendor/gravity-forms.scss";
 
+
+
+/*------------------------------------------------------------------------------
+  Global styles from ())this) parent theme
+------------------------------------------------------------------------------*/
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/agenda_glance";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/bootstrap_extras";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/cards";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/carousel";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/comments";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/content_rows";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/dummy_anchor";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/footer_feature";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/footer_stick";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/forms";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/full_width";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/images";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/nav_sheet";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/nokia_fonts";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/sponsor_thumb_list";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/tabbed_box";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/thumb_speaker";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/toggle_animation";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/typography_responsive";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/utilities";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/wp-classes";
+@import "../../../../canary-parent-bootstrap4/resources/assets/styles/components/zindex";
+
+
+
 /** Import theme styles */
 @import "components/images";
 @import "common/global";
