@@ -81,3 +81,11 @@
 .embed-responsive-item {
   @extend .embed-responsive-item;
 }
+
+/*------------------------------------------------------------------------------
+  Wordpress admin bar compensation
+------------------------------------------------------------------------------*/
+
+body.logged-in.admin-bar .navbar.fixed-top {
+  margin-top: 32px;
+}
