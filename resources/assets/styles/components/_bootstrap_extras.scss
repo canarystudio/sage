@@ -15,3 +15,12 @@
   padding-left: calc(#{$grid-gutter-width} + 10px);
   padding-right: calc(#{$grid-gutter-width} + 10px);
 }
+
+
+/*------------------------------------------------------------------------------
+  Z index utility
+------------------------------------------------------------------------------*/
+.z-10 {
+  z-index: 10;
+  position: relative;
+}
