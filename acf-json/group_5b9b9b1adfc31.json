@@ -1,0 +1,277 @@
+{
+    "key": "group_5b9b9b1adfc31",
+    "title": "CW Agenda",
+    "fields": [
+        {
+            "key": "field_5b9bb3b3d3632",
+            "label": "Day",
+            "name": "cw_agenda_day",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "cw-agenda-day",
+                "id": ""
+            },
+            "layouts": {
+                "5b9bb50ebd80d": {
+                    "key": "5b9bb50ebd80d",
+                    "name": "agenda_day",
+                    "label": "Day",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b9bb63301c31",
+                            "label": "Date",
+                            "name": "cw_agenda_date",
+                            "type": "date_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "28.5",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "d\/m\/Y",
+                            "return_format": "d\/m\/Y",
+                            "first_day": 1
+                        },
+                        {
+                            "key": "field_5b9bb64001c32",
+                            "label": "Description",
+                            "name": "cw_agenda_description",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "71.5",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_5b9b9b21c9cd4",
+                            "label": "Time-slots",
+                            "name": "cw_agenda_timeslots",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "+ Time-slot",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5b9b9ecb1ac0e",
+                                    "label": "Time",
+                                    "name": "cw_agenda_timeslots_time",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "Time",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5b9b9c65609d0",
+                                    "label": "Agenda Items",
+                                    "name": "cw_agenda_timeslots_agenda_item",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "75",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "field_5b9b9f2bb6601",
+                                    "min": 1,
+                                    "max": 0,
+                                    "layout": "table",
+                                    "button_label": "+",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5b9b9f2bb6601",
+                                            "label": "Title",
+                                            "name": "cw_agenda_timeslots_agenda_item_title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "80",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "Title",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5b9b9ce48c444",
+                                            "label": "Content",
+                                            "name": "cw_agenda_timeslots_agenda_item_content",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "100",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "Content",
+                                            "maxlength": "",
+                                            "rows": 3,
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_5b9bb75758cfc",
+                                            "label": "Options",
+                                            "name": "cw_agenda_timeslots_agenda_item_options",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_5b9d994be38ee",
+                                                        "operator": "!=",
+                                                        "value": "1"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "20",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "black": "default",
+                                                "#dd3333": "Od tionsequi commodolor autatie curabitur",
+                                                "#81d742": "This is a breakout",
+                                                "#3141d6": "Odigna augiat vero tem quis venenatis magnim, sismolore facidui erostin auguer laortie lam. Digna henissi irilla exerostin endreet dolorerat. Tionulla sollicitudin sandigna, acipit nullandrem in curae, fusce nisim delendipis commodipis. Condimentum loborer atummy nonsenibh phasellus. Adionse adiat lumsan luptat loborperci tatue euguercinis, magna velit erostin henisi cras dolorem. Lorpercidunt mod et, dolutpat ametum, ipisl nostissi, os duisit exercipsum modo vivamus. Odio modo dolorerat quatuerit dolorem suspendisse velesse secte; vullan qui porta consequipis. Adignit magna iaculis, ea incinci, miniat henis, facidunt tat auguero ilis auguero. Olorper ilis duismoloboreisse, volesed od, tinit rcilis, iliqui augiam modolore exeros inceptos. ",
+                                                "#8224e3": "And another"
+                                            },
+                                            "default_value": [
+                                                "standard"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": "",
+                                            "cw_agenda_timeslots_agenda_item_options": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_5b9bbaa070d45",
+                                    "label": "Row Type",
+                                    "name": "cw_agenda_timeslots_background",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "30",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "default": "default",
+                                        "#dd3333": "Breakouts",
+                                        "#42189b": "Plenary",
+                                        "#81d742": "Social",
+                                        "#eeee22": "Breakouts"
+                                    },
+                                    "default_value": [
+                                        "standard"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "label",
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "cw_agenda_timeslots_background": []
+                                },
+                                {
+                                    "key": "field_5b9d994be38ee",
+                                    "label": "Header?",
+                                    "name": "cw_agenda_timeslots_agenda_item_header",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Header",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add day to agenda",
+            "min": 1,
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "cw-agenda"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1541678213
+}
