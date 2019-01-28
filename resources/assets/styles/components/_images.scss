@@ -7,10 +7,10 @@ svg {
   height: 1em;
   overflow: visible;
   vertical-align: -.125em;
-  fill: currentColor !important;
+  // fill: currentColor;
 
   > path {
-    fill: currentColor !important;
+    // fill: currentColor;
   }
 
   .btn & {
