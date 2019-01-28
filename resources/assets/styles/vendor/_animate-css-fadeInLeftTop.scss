@@ -1,0 +1,15 @@
+@keyframes fadeInLeftTop {
+  from {
+    opacity: 0;
+    transform: translate3d(-20%, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeftTop {
+  animation-name: fadeInLeftTop;
+}

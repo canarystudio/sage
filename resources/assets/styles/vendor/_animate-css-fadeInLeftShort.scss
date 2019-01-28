@@ -1,0 +1,15 @@
+@keyframes fadeInLeftShort {
+  from {
+    opacity: 0;
+    transform: translate3d(-16%, 0%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeftShort {
+  animation-name: fadeInLeftShort;
+}
