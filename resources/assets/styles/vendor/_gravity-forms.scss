@@ -1,0 +1,170 @@
+/*------------------------------------------------------------------------------
+  grid
+------------------------------------------------------------------------------*/
+
+//row
+.gform_fields {
+  // @extend .row !optional;
+  // from bootstrap 4.1.3
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -($grid-gutter-width / 2);
+  margin-left: -($grid-gutter-width / 2);
+}
+
+//col
+.gfield {
+  margin-bottom: $form-group-margin-bottom;
+  // @extend .col !optional;
+  // from bootstrap 4.1.3
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: ($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+}
+
+/*------------------------------------------------------------------------------
+  wrapper
+------------------------------------------------------------------------------*/
+
+.gform_wrapper ul {
+  @extend .list-unstyled !optional;
+}
+
+/*------------------------------------------------------------------------------
+  form elements
+------------------------------------------------------------------------------*/
+
+.ginput_container select,
+.ginput_container textarea,
+.ginput_container input[type="text"],
+.ginput_container input[type="email"],
+.ginput_container input[type="url"] {
+  // @extend .form-control !optional;
+  // from bootstrap 4.1.3
+  display: block;
+  width: 100%;
+  height: calc(3.125rem + 2px);
+  padding: .8125rem 2.375rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  transition: $input-transition;
+}
+.ginput_container textarea {
+  height: auto;
+}
+
+/*------------------------------------------------------------------------------
+  bootstrap custom form elements
+------------------------------------------------------------------------------*/
+
+.ginput_container select {
+  @extend .custom-select;
+  overflow-x: hidden;
+}
+
+/*------------------------------------------------------------------------------
+  validation
+------------------------------------------------------------------------------*/
+
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: $danger;
+}
+.gform_button {
+  @extend .btn !optional;
+  @extend .btn-primary !optional;
+}
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: $danger;
+  }
+  input,
+  select,
+  textarea {
+    border-color: $danger;
+    background-color: $danger;
+    color: $white;
+    // @include form-control-focus($danger);
+  }
+}
+
+/*------------------------------------------------------------------------------
+  validation
+------------------------------------------------------------------------------*/
+
+.validation_error {
+  @extend .alert !optional;
+  @extend .alert-danger !optional;
+}
+#gforms_confirmation_message {
+  @extend .alert !optional;
+  @extend .alert-success !optional;
+}
+
+/*------------------------------------------------------------------------------
+  visibility
+------------------------------------------------------------------------------*/
+.gfield_visibility_hidden {
+  display: none;
+}
+
+/*------------------------------------------------------------------------------
+  extras
+------------------------------------------------------------------------------*/
+
+// tim's updates
+.gform_body > .gform_fields {
+  @extend .form-group !optional;
+}
+.gform_description {
+  @extend p !optional;
+  display: block;
+}
+.gform_footer.top_label {
+  margin-top: 16px;
+}
+
+// tim's checkboxes
+ul.gfield_checkbox,
+ul.gfield_radio {
+
+  li {
+    position: relative;
+
+    input {
+      position: absolute;
+      z-index: 1000;
+      top: 2px;
+    }
+
+    label {
+      margin-left: 24px;
+      font-weight: normal;
+      z-index: 900;
+      position: relative;
+    }
+
+  }
+
+}
+.gform_confirmation_message {
+  @extend .alert !optional;
+  @extend .alert-success !optional;
+}
+
+.gform_wrapper .gform_ajax_spinner {
+  width: 6rem;
+  overflow: visible;
+  height: 2rem;
+  margin-left: 1rem;
+}
