@@ -41,7 +41,7 @@
 
 ?>
 <header class="header-primary">
-  <nav class="navbar navbar-expand-lg  px-6 <?php echo $event_navigation_colour; ?> <?php echo $event_navigation_placement; ?>">
+  <nav class="navbar navbar-expand-lg px-4 px-sm-8 <?php echo $event_navigation_colour; ?> <?php echo $event_navigation_placement; ?>">
     <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
       <?php echo $event_logo; ?>
     </a>
@@ -62,9 +62,9 @@
             'menu'              => 'primary_navigation',
             'theme_location'    => 'primary_navigation',
             'depth'       => 2, // 1 = with dropdowns, 0 = no dropdowns.
-            'container'     => 'div',
+            'container'     => '',
             'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'bs-example-navbar-collapse-1',
+            'container_id'      => 'cw-navbar-collapse',
             'menu_class'        => 'navbar-nav ml-auto mt-lg-0',
             'fallback_cb'   => 'WP_Bootstrap_Navwalker::fallback',
             'walker'      => new WP_Bootstrap_Navwalker()
