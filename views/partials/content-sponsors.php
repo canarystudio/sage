@@ -13,6 +13,7 @@
       // now, we'll exctract the image URL from $image_object
       $image_url = $image_object['sizes'][$image_size];
     ?>
+    <div>
     <?php if ( get_field('sponsors_url') ) : ?>
       <a href="<?php echo get_field('sponsors_url'); ?>" target="_blank">
     <?php endif; ?>
@@ -22,6 +23,7 @@
     <?php if ( get_field('sponsors_url') ) : ?>
       </a>
     <?php endif; ?>
+    </div>
 
     <?php
       } else {

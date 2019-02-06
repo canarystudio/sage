@@ -93,8 +93,8 @@
     }
 
     &.sponsor-large {
-      flex-basis: 30% !important;
-      max-width: 30%;
+      flex-basis: 33.333333% !important;
+      max-width: 33.333333%;
       a {
         height: 12vw;
       }
@@ -112,18 +112,29 @@
 
 .sponsor-list-shortcode {
 
+  .list-sponsor {
+    margin: 0;
+  }
+
   h5 {
     font-size: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     margin-top: 2rem;
   }
+
   .card {
-    flex-basis: 30% !important;
-    max-width: 30%;
-    margin-top: ($grid-gutter-width /4);
-    margin-bottom: ($grid-gutter-width /4);
-    margin-left: ($grid-gutter-width / 2);
-    margin-right: 0;
+    flex-basis: 33.333333% !important;
+    max-width: 33.333333%;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    padding-right: .25rem;
+    padding-bottom: .25rem;
+
+    > div {
+      background-color: $white;
+    }
+
     a {
       height: 5vw;
       display: flex;
@@ -137,16 +148,16 @@
     }
 
     &.sponsor-large {
-      flex-basis: 48% !important;
-      max-width: 48%;
+      flex-basis: 100% !important;
+      max-width: 100%;
       a {
         height: 11vw;
       }
     }
 
     &.sponsor-small {
-      flex-basis: 21.9% !important;
-      max-width: 21.9%;
+      flex-basis: 25% !important;
+      max-width: 25%;
       a {
         height: 3.65vw;
       }
