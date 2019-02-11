@@ -1,4 +1,4 @@
-<footer class="footer-primary py-5">
+<footer class="footer-primary">
   <div class="container">
     <?php dynamic_sidebar('sidebar-footer'); ?>
   </div>
