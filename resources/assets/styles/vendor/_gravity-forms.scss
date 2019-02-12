@@ -32,7 +32,8 @@
 ------------------------------------------------------------------------------*/
 
 .gform_wrapper ul {
-  @extend .list-unstyled !optional;
+  padding-left: 0;
+  list-style: none;
 }
 
 /*------------------------------------------------------------------------------
@@ -48,14 +49,14 @@
   // from bootstrap 4.1.3
   display: block;
   width: 100%;
-  height: calc(3.125rem + 2px);
-  padding: .8125rem 2.375rem;
-  font-size: 1rem;
-  line-height: 1.5;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
   color: $input-color;
   background-color: $input-bg;
   background-clip: padding-box;
-  border: 1px solid $input-border-color;
+  border: $input-border-width solid $input-border-color;
   border-radius: $input-border-radius;
   transition: $input-transition;
 }
@@ -78,7 +79,7 @@
 
 .gform_wrapper .gfield_required {
   padding-left: 1px;
-  color: $danger;
+  color: $form-feedback-invalid-color;
 }
 .gform_button {
   @extend .btn !optional;
@@ -86,15 +87,27 @@
 }
 .gform_wrapper .gfield_error {
   .gfield_label {
-    color: $danger;
+    color: $form-feedback-invalid-color;
+  }
+  .gfield_description.validation_message {
+    color: $form-feedback-invalid-color;
+    font-size: $form-feedback-font-size;
+    margin-top: $form-feedback-margin-top;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      background-image: $form-feedback-icon-invalid;
+      content: '';
+      height: 1em;
+      width: 1em;
+      margin-right: .25em;
+    }
   }
   input,
   select,
   textarea {
-    border-color: $danger;
-    background-color: $danger;
-    color: $white;
-    // @include form-control-focus($danger);
+    border-color: $form-feedback-invalid-color;
   }
 }
 
@@ -116,6 +129,28 @@
 ------------------------------------------------------------------------------*/
 .gfield_visibility_hidden {
   display: none;
+}
+
+
+//
+// help text
+// --------------------------------------------------
+
+.field_description_below .gfield_description {
+  margin-top: $label-margin-bottom;
+}
+.field_description_above .gfield_description {
+  margin-bottom: $label-margin-bottom;
+}
+
+
+//
+// title section
+// --------------------------------------------------
+
+// when a title comes after a field
+.gfield +  .gsection .gsection_title {
+  margin-top: $form-text-margin-top;
 }
 
 /*------------------------------------------------------------------------------
@@ -167,4 +202,14 @@ ul.gfield_radio {
   overflow: visible;
   height: 2rem;
   margin-left: 1rem;
+}
+
+
+//
+// honeypot
+// --------------------------------------------------
+.gform_validation_container {
+  display: none!important;
+  position: absolute!important;
+  left: -9000px;
 }
