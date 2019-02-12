@@ -12,7 +12,7 @@ function setup() {
   // https://roots.io/plugins/soil/
   add_theme_support('soil-clean-up');
   add_theme_support('soil-nav-walker');
-  add_theme_support('soil-nice-search');
+  // add_theme_support('soil-nice-search');
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
 
@@ -102,7 +102,7 @@ function assets() {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
-  
+
   // load slick per page template
   if (is_page_template('views/home.php')) {
       wp_enqueue_script('slick/js', Assets\asset_path('scripts/slick.min.js'), ['jquery'], null, true);
