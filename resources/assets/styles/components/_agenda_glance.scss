@@ -3,5 +3,167 @@
 ------------------------------------------------------------------------------*/
 
 .agenda-glance-item {
-  margin: .5px 2px;
+
+  @include media-breakpoint-up(sm) {
+    margin: .5px 2px;
+  }
+}
+
+.agenda-overview-content {
+
+  article,
+  section,
+  div {
+    display: flex;
+  }
+
+  article {
+
+    @include media-breakpoint-up(sm) {
+      padding: 1rem;
+      min-height: 60vh;
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  div {
+    flex-direction: column;
+  }
+
+  section {
+    flex-direction: column;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 2rem;
+      min-width: 100%;
+    }
+  }
+
+  section {
+
+    @include media-breakpoint-down(xs) {
+      flex-basis: auto;
+    }
+    @include media-breakpoint-up(sm) {
+      flex-basis: 100%;
+      margin-left: .3rem;
+      margin-right: .3rem;
+    }
+  }
+
+  div:not(.split) {
+    padding: 1.5rem 1.25rem;
+  }
+
+  div {
+    margin-bottom: .1rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+
+    &.header {
+      flex-grow: 0;
+      flex-shrink: 1;
+      justify-content: start;
+      margin-bottom: .3rem;
+      background-color: $white;
+    }
+  }
+
+  .split {
+    flex-direction: row;
+
+    >div {
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex-basis: 0;
+
+      &:first-child {
+        margin-right: .1rem;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #fff;
+    line-height: 1.2em;
+
+    &.time {
+      font-size: .6rem;
+      white-space: nowrap;
+      margin-bottom: .25rem;
+    }
+
+    &.item-title {
+      text-transform: uppercase;
+      font-size: 1.25rem;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  div {
+    &.leisure {
+      background-color: $primary;
+    }
+
+    &.plenary {
+      background-color: $secondary;
+      .item-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    &.breakout {
+      background-color: desaturate( $warning, 15%);
+    }
+
+    &.exhibition {
+      background-color: $warning;
+    }
+
+    &.partner {
+      background-color: $gray-700;
+    }
+
+    &.registration {
+      background-color: $secondary;
+    }
+  }
+
+  .half {
+    flex-basis: 50%;
+  }
+
+  .quarter {
+    flex-basis: 25%;
+  }
+
+  .threequarters {
+    flex-basis: 75%;
+  }
+
+  .third {
+    flex-basis: 33.333333%;
+  }
+
+  .twothirds {
+    flex-basis: 66.66666666%;
+  }
+
+  .fifth {
+    flex-basis: 18.75%;
+  }
+
 }
