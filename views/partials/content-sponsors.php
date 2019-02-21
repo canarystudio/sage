@@ -1,10 +1,4 @@
-<?php
-  // check for cw presentation plugin
-  if(in_array('cw-presentation-plugin-v2/presentation-plugin.php', apply_filters('active_plugins', get_option('active_plugins')))){
-?>
 
-
-  <?php if (get_field('sponsors_logo')) { ?>
     <?php
       // first, get the image object returned by ACF
       $image_object = get_field('sponsors_logo');
@@ -25,19 +19,3 @@
     <?php endif; ?>
     </div>
 
-    <?php
-      } else {
-    ?>
-
-  <?php }; ?>
-
-  <?php
-  } else {
-    // show error in console
-  ?>
-  <script>
-    console.error('Enable the presentations plugin to display sponsors.');
-  </script>
-  <?php
-  }
-?>
