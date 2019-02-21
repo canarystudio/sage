@@ -1,0 +1,61 @@
+/*------------------------------------------------------------------------------
+  Sponsor archive
+------------------------------------------------------------------------------*/
+
+.post-type-archive-sponsors {
+  @extend .sponsor-list-shortcode;
+
+  .card-deck {
+    justify-content: center;
+  }
+
+  .sponsor-category-title {
+    text-align: center;
+  }
+
+    .card {
+      flex-basis: 50% !important;
+      max-width: 50% !important;
+
+      &.sponsor-large {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+      }
+
+      &.sponsor-small {
+        flex-basis: 33.3333% !important;
+        max-width: 33.3333% !important;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+
+      .card {
+        flex-basis: 25% !important;
+        max-width: 25% !important;
+
+        a {
+          min-height: 10rem;
+        }
+
+        &.sponsor-large {
+          flex-basis: 50% !important;
+          max-width: 50% !important;
+          a {
+            min-height: 14rem;
+          }
+        }
+
+        &.sponsor-small {
+          flex-basis: 20% !important;
+          max-width: 20% !important;
+          a {
+            min-height: 8rem;
+          }
+        }
+
+      }
+
+    }
+
+  }
