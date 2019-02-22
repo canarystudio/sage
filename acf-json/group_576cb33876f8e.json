@@ -58,7 +58,11 @@
             "choices": {
                 "standard": "Standard",
                 "large": "Large",
-                "small": "Small"
+                "small": "Small",
+                "full": "Full",
+                "half": "Half",
+                "third": "Third",
+                "quarter": "Quarter"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -85,5 +89,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542889063
+    "modified": 1550800466
 }
