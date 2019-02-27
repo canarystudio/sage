@@ -9,7 +9,7 @@
       // first, get the image object returned by ACF
       $image_object = get_field('speaker_image', $speaker);
       // and the image size you want to return
-      $image_size = 'thumb';
+      $image_size = 'thumbnail';
       // now, we'll exctract the image URL from $image_object
       $image_url = $image_object['sizes'][$image_size];
     ?>
