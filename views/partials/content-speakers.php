@@ -25,7 +25,7 @@
     <?php }; ?>
 
     <div class="card-body">
-      <p class="speaker-name">
+      <p class="speaker-name mb-0">
         <a href="<?php the_permalink(); ?>">
         <span class="h5">
         <?php if (get_field('speaker_title', $speaker)) { ?>
