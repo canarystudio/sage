@@ -9,7 +9,7 @@
 <?php endif; ?>
 <div class="row row-speakers mx-sm-n1">
   <?php while (have_posts()) : the_post(); ?>
-  <div class="col-sm-3 px-sm-1">
+  <div class="col-sm-3 px-sm-1 mb-3">
     <?php get_template_part('views/partials/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
   </div>
   <?php endwhile; ?>
