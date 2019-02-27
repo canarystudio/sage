@@ -3,7 +3,7 @@
   if(in_array('cw-presentation-plugin-v2/presentation-plugin.php', apply_filters('active_plugins', get_option('active_plugins')))){
 ?>
 
-  <div class="card card-speaker">
+  <div class="card card-speaker h-100 mb-3">
   <?php if (get_field('speaker_image', $speaker)) { ?>
     <?php
       // first, get the image object returned by ACF
