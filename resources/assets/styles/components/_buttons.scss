@@ -1,0 +1,18 @@
+//
+// button in navbar
+// --------------------------------------------------
+
+.navbar-btn {
+  margin-top: ( $navbar-padding-y - .5rem );
+  margin-bottom: ( $navbar-padding-y - .5rem );
+  > a.nav-link {
+    color: currentColor !important;
+    background-color: inherit !important;
+    padding-top: ( $navbar-padding-y - .25rem );
+    padding-bottom: ( $navbar-padding-y - .25rem );
+  }
+
+  &:last-child {
+    margin-left: ( $navbar-padding-x / 2 );
+  }
+}
