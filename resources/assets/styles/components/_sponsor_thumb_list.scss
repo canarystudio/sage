@@ -46,7 +46,8 @@
       width: auto;
     }
 
-    &.sponsor-large {
+    &.sponsor-large,
+    &.sponsor-full {
       flex-basis: 100% !important;
       max-width: 100%;
       a {
@@ -55,7 +56,26 @@
       }
     }
 
-    &.sponsor-small {
+    &.sponsor-half {
+      flex-basis: 50% !important;
+      max-width: 50%;
+      a {
+        height: 8vw;
+        min-height: 9rem;
+      }
+    }
+
+    &.sponsor-third {
+      flex-basis: 33.333333% !important;
+      max-width: 33.333333%;
+      a {
+        height: 5vw;
+        min-height: 6rem;
+      }
+    }
+
+    &.sponsor-small,
+    &.sponsor-quarter {
       flex-basis: 25% !important;
       max-width: 25%;
       a {
