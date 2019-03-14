@@ -72,18 +72,3 @@ $iconSizes:
   background-position: 50% 50%;
 }
 
-
-img:after {
-  background-color: $gray-100;
-  display: block;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "\203D" attr(src);
-  display: block;
-  font-size: .75rem;
-  overflow: hidden;
-}
