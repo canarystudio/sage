@@ -24,6 +24,11 @@
     <a class="card-button btn-icon btn-enlarge" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
     <?php }; ?>
 
+    <?php
+    get_template_part('views/partials/content-speakers-modal');
+
+    ?>
+
     <div class="card-body">
       <p class="speaker-name mb-0">
         <a href="<?php the_permalink(); ?>">
