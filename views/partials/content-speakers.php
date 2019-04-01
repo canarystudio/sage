@@ -4,21 +4,21 @@
 ?>
 
   <div class="card card-speaker h-100">
-  <?php if (get_field('speaker_image', $speaker)) { ?>
-    <?php
-      // first, get the image object returned by ACF
-      $image_object = get_field('speaker_image', $speaker);
-      // and the image size you want to return
-      $image_size = 'thumbnail';
-      // now, we'll exctract the image URL from $image_object
-      $image_url = $image_object['sizes'][$image_size];
-    ?>
-    <img class="card-img-top" src="<?php echo $image_url; ?>" alt="<?php the_field(speaker_first_name); ?> <?php the_field(speaker_last_name); ?>">
-    <?php
-      } else {
-    ?>
 
-    <?php }; ?>
+    <?php
+    // primary speaker photo
+      if (get_field('speaker_image', $speaker)) {
+        $speaker_name = get_field(speaker_first_name) . " " . get_field(speaker_last_name);
+        $attachment_id = get_field('speaker_image', $speaker);
+        $size = "full"; // (thumbnail, medium, large, full or custom size)
+        $icon = "true";
+        $attr = array(
+          'class' => "card-img-top h-auto",
+          'alt' => $speaker_name,
+        );
+        echo wp_get_attachment_image( $attachment_id, $size, $icon, $attr );
+      };
+    ?>
 
     <?php if (get_field('speaker_bio')) { ?>
     <a class="card-button btn-icon btn-enlarge" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
@@ -35,7 +35,7 @@
         <?php the_field('speaker_first_name', $speaker); ?>
         <?php }; ?>
         <?php if (get_field('speaker_last_name', $speaker)) { ?>
-        <?php the_field('speaker_last_name', $speaker); ?>.
+        <?php the_field('speaker_last_name', $speaker); ?>
         <?php }; ?>
         </span>
         </a>
