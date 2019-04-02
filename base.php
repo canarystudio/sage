@@ -6,7 +6,7 @@ use Roots\Sage\Wrapper;
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <?php get_template_part('views/partials/head'); ?>
-  <body <?php body_class(); ?> data-spy="scroll" data-target="#pagenav" data-offset="0" style="position: relative; ">
+  <body <?php body_class(); ?> data-spy="scroll" data-target="#pagenav" data-offset="120" style="position: relative; ">
     <!--[if IE]>
       <div class="alert alert-warning">
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
