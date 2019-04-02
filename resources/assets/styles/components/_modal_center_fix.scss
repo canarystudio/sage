@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------------
+  Fixes centered modal to allow for centring without covering content
+------------------------------------------------------------------------------*/
+
+body.modal-open {
+
+  .show.modal-dialog-centered {
+    display: flex !important;
+    z-index: 10000;
+  }
+}
+
+body:not(.modal-open) {
+
+  .modal-dialog-centered {
+    z-index: -1000;
+  }
+}
