@@ -25,8 +25,9 @@
     <?php }; ?>
 
     <?php
-    get_template_part('views/partials/content-speakers-modal');
-
+    if ( is_archive() ) {
+      get_template_part('views/partials/content-speakers-modal');
+    };
     ?>
 
     <div class="card-body">
