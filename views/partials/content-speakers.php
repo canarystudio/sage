@@ -1,7 +1,4 @@
-<?php
-  // check for cw presentation plugin
-  if(in_array('cw-presentation-plugin-v2/presentation-plugin.php', apply_filters('active_plugins', get_option('active_plugins')))){
-?>
+
 
   <div class="card card-speaker h-100">
 
@@ -60,14 +57,3 @@
       </p>
     </div>
   </div>
-
-  <?php
-  } else {
-    // show error in console
-  ?>
-  <script>
-    console.log('Enable the presentations plugin to display speakers.');
-  </script>
-  <?php
-  }
-?>
