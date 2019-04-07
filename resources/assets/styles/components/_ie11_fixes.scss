@@ -1,0 +1,9 @@
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+   /* IE10+ specific styles go here */
+   .nav-collapse,
+  .navbar-nav,
+  .navbar-expand-lg .navbar-nav,
+  .navbar-nav .menu-item {
+    flex: 0 0 auto !important;
+   }
+}
