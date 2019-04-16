@@ -37,6 +37,12 @@
 
 
 
+
+
+//
+// typography
+// --------------------------------------------------
+
 $font-family-strong: 'nokia-pure-text';
 
 .font-bold {
@@ -49,10 +55,29 @@ strong, b, th {
   font-weight: normal;
 }
 
+$font-family-ultralight: 'nokia-pure-headline-ultralight';
+$font-family-light: 'nokia-pure-headline-light';
+
 .display-1,
 .display-2,
 .display-3,
 .display-4,
-.display-5 {
-  font-family: "nokia-pure-headline-ultralight";
+.display-5,
+.font-ultralight
+ {
+  font-family: $font-family-ultralight;
+  font-weight: normal;
+}
+
+.font-light {
+  font-family: $font-family-light;
+  font-weight: normal;
+}
+
+.font-sm {
+  font-size: $font-size-sm;
+}
+
+.font-xs {
+  font-size: ($font-size-sm * .8);
 }

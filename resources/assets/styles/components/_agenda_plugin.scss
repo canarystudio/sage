@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+  Agenda plugin
+------------------------------------------------------------------------------*/
+
+
+.cw-agenda-shortcode {
+  *:empty,
+  *:blank {
+    display: none;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+  * + p {
+    margin-top: $paragraph-margin-bottom / 4;
+  }
+
+  .border-left {
+    // override this in local variables
+    border-left-width: $border-left-width !important;
+  }
+
+  .cw-cell {
+    padding: $table-cell-padding;
+  }
+
+  + .cw-agenda-shortcode {
+    margin-top: $table-cell-padding * 3;
+  }
+}
+
