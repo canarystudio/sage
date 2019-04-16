@@ -11,7 +11,7 @@
     if (get_field('speaker_image', $speaker)) {
       $speaker_name = get_field(speaker_first_name) . " " . get_field(speaker_last_name);
       $attachment_id = get_field('speaker_image', $speaker);
-      $size = "landscape-thumb"; // (thumbnail, medium, large, full or custom size)
+      $size = "thumbnail"; // (thumbnail, medium, large, full or custom size)
       $icon = "true";
       $attr = array(
         'class' => "card-img-top h-auto",
