@@ -4,7 +4,7 @@
 
   ?>
 
-  <div class="card card-speaker">
+  <div class="card card-speaker w-100">
 
     <?php
 
