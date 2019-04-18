@@ -9,7 +9,7 @@
     <?php
 
     // primary speaker photo
-    $placeholder_image = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 585 585" class="img-fluid"><title>' . $speaker_name . '</title><rect width="585" height="585" style="fill:#eff2f4"/><path d="M425.56,585c0-58.84-31.47-108.39-77.26-133.16,17.17-15.49,25.75-40.26,25.75-65,0-49.55-37.2-89.81-83-89.81s-83,40.26-83,89.81c0,24.77,11.45,49.54,28.62,65-45.79,24.77-77.26,74.32-77.26,133.16" style="fill:none;stroke:#001135;stroke-miterlimit:8"/></svg>';
+    $placeholder_image = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 585 585"><title>' . $speaker_name . '</title><rect width="585" height="585" style="fill:#eff2f4"/><path d="M561,585c0-108.91-63.5-200.62-155.89-246.46,34.64-28.67,51.95-74.52,51.95-120.31C457.06,126.52,382,52,289.59,52S122.11,126.52,122.11,218.23c0,45.84,23.11,91.69,57.75,120.31C87.47,384.38,24,476.09,24,585" style="fill:#fff"/></svg>';
 
     // if has image
     if (get_field('speaker_image', $speaker)) {
