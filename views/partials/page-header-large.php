@@ -52,7 +52,7 @@
 
 
 <div class="banner-primary py-8 bg-primary"<?php echo $background_style; ?>>
-  <div class="container <?php echo $bg_alignment; ?> text-white">
+  <div class="px-cw <?php echo $bg_alignment; ?> text-white">
 
     <!-- event title -->
     <h1 class="display-<?php echo $bg_fontsize; ?> mb-1 animated animated-slow fadeInUp wow" data-wow-delay=".5s">

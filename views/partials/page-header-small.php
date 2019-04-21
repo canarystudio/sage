@@ -52,7 +52,7 @@
 
 
 <div class="banner-primary pt-3 pb-4 bg-primary"<?php echo $background_style; ?>>
-  <div class="container <?php echo $bg_alignment; ?> text-white d-flex align-items-center">
+  <div class="px-cw <?php echo $bg_alignment; ?> text-white d-flex align-items-center">
 
     <!-- event title -->
     <div class="flex-grow-1">
