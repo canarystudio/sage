@@ -41,7 +41,7 @@
 
 ?>
 <header class="header-primary">
-  <nav class="navbar navbar-expand-lg px-4 px-sm-8 <?php echo $event_navigation_colour; ?> <?php echo $event_navigation_placement; ?>">
+  <nav class="navbar navbar-expand-lg  <?php echo $event_navigation_colour; ?> <?php echo $event_navigation_placement; ?>">
     <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
       <?php echo $event_logo; ?>
     </a>
