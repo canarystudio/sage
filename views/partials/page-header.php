@@ -1,13 +1,18 @@
 <?php use Roots\Sage\Titles; ?>
 
-<?php
-  /**
-   * Check for header type
-   * Use the small header for all banners other than front page
-   */
+<div class="page-header pb-cw">
+  <h1><?php
 
-  if ( is_front_page() ) {
-    get_template_part('views/partials/page-header', 'large');
-  } else {
-    get_template_part('views/partials/page-header', 'small');
-  };
+    if ( is_archive() ) {
+      echo post_type_archive_title( '', false );
+    } else {
+      the_title();
+    };
+
+  ?></h1>
+
+  <?php if ( get_field('search_on_archive', 'option') ) : ?>
+    <?php get_template_part('views/partials/form-search', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+  <?php endif; ?>
+
+</div>

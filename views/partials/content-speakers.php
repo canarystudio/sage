@@ -1,8 +1,9 @@
-<?php
-//  check for options
-  $show_speaker_bio = get_field('event_link_speaker_bio', 'option');
+<article <?php post_class('col-sm-6 col-md-4 col-lg-3 d-flex px-sm-1 mb-3'); ?>>
 
-  ?>
+<?php
+  // check for options
+  $show_speaker_bio = get_field('event_link_speaker_bio', 'option');
+?>
 
   <div class="card card-speaker w-100">
 
@@ -42,8 +43,10 @@
 
     ?>
     <?php
-    if ( is_archive() ) {
-      get_template_part('views/partials/content-speakers-modal');
+    if ($show_speaker_bio) {
+      if ( is_archive() ) {
+        get_template_part('views/partials/content-speakers/content-speakers-modal');
+      }
     };
     ?>
 
@@ -78,10 +81,12 @@
       ?>
 
       <?php if (get_field('speaker_bio')) { ?>
-      <a class="btn-enlarge  font-sm" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
+      <a class="btn-enlarge font-sm" href="#" data-toggle="modal" data-target=".bd-example-modal-sm-<?php echo $post->ID; ?>">Biography</a>
       <?php }; ?>
 
       <?php }; ?>
 
     </div>
   </div>
+
+</article>

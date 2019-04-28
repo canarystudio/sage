@@ -16,7 +16,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('views/partials/header');
     ?>
-  <div class="main px-cw pb-cw"><?php include Wrapper\template_path(); ?></div>
+  <div class="main px-cw py-cw"><?php include Wrapper\template_path(); ?></div>
     <?php
       do_action('get_footer');
       get_template_part('views/partials/footer');
