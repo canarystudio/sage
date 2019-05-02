@@ -13,7 +13,14 @@
         <?php if( get_field('website_address') ): ?><span class="d-flex flex-column flex-sm-row pb-1 pb-sm-0 align-items-sm-center"><small class="pr-1">Website:</small> <strong><a href="<?php the_field('website_address'); ?>"><?php the_field('website_address'); ?></a></strong></span><?php endif; ?>
         <?php if( get_field('booth_number') ): ?><span class="d-flex flex-column flex-sm-row pb-1 pb-sm-0 align-items-sm-center"><small class="pr-1">Booth:</small> <strong><a href="/exhibiting/#floorplan" class="text-primary"><?php the_field('booth_number'); ?></a></strong></span><?php endif; ?>
       </p>
+
+      <?php
+      // check for ISLC grandchild plugin
+        if ( !is_plugin_active( 'cw-grandchild-islc6/cw-grandchild-islc6.php' ) ) {
+      ?>
       <p class="mb-4"><a href="#appointment" class="smooth btn btn-sm btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Request an appointment</a></p>
+      <?php }; ?>
+
       <div class="pr-4"><?php the_content(); ?></div>
     </div>
     <div class="col-sm-4 pl-sm-2 mb-3 mb-sm-0 order-1 order-sm-2">
@@ -21,12 +28,17 @@
     </div>
   </section>
 
+  <?php
+  // check for ISLC grandchild plugin
+    if ( !is_plugin_active( 'cw-grandchild-islc6/cw-grandchild-islc6.php' ) ) {
+  ?>
   <div class="pr-sm-16" id="appointment">
     <h3 class="letter-spacing-normal">Request an Appointment</h3>
     <p><?php the_title(); ?> will be available on the exhibition floor for meetings during the Exhibition Open hours.</p>
     <p>Please nominate if you would prefer a morning or afternoon meeting time below – a representative from <?php the_title(); ?> will be in direct contact with you via the email you enter below to confirm the meeting time.</p>
     <?php gravity_form(10, false, false, false, '', true); ?>
   </div>
+  <?php }; ?>
 
 </article>
 
