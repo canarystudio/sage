@@ -24,7 +24,7 @@
       <div class="pr-4"><?php the_content(); ?></div>
     </div>
     <div class="col-sm-4 pl-sm-2 mb-3 mb-sm-0 order-1 order-sm-2">
-      <div><?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid' ) ); ?></div>
+      <div><?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?></div>
     </div>
   </section>
 
