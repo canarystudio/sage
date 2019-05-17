@@ -13,7 +13,7 @@
       foreach($categories as $cat) :
         if (($cat->count != '0') && ($cat->name != 'Uncategorized')) :
     ?>
-    <h5 class="sponsor-category-title"><?php echo $cat->name; ?></h5>
+    <h4 class="sponsor-category-title mb-4 text-muted"><?php echo $cat->name; ?></h4>
     <div class="card-deck list-sponsor justify-content-center items-center">
 
     <?php
