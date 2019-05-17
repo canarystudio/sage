@@ -25,7 +25,7 @@
       $catlabel = $cat->name;
     ?>
 
-    <div class="card <?php if ( get_field('sponsors_size') ) : echo ' sponsor-' . get_field('sponsors_size'); endif; ?>">
+    <div class="card justify-content-center align-items-center <?php if ( get_field('sponsors_size') ) : echo ' sponsor-' . get_field('sponsors_size'); endif; ?>">
       <?php
         get_template_part('views/partials/content-sponsors');
       ?>
