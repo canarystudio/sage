@@ -14,7 +14,7 @@
         if (($cat->count != '0') && ($cat->name != 'Uncategorized')) :
     ?>
     <h5 class="sponsor-category-title"><?php echo $cat->name; ?></h5>
-    <div class="card-deck list-sponsor">
+    <div class="card-deck list-sponsor justify-content-center items-center">
 
     <?php
       // loop sponsors that belong to category
