@@ -36,7 +36,7 @@
 
   ?>
   <?php while (have_posts()) : the_post(); ?>
-  <div class="col-sm-6 col-md-4 col-lg-3 d-flex px-sm-1 mb-3">
+  <div class="col-sm-4 col-md-3 col-lg-2 d-flex px-sm-1 mb-3">
     <?php get_template_part('views/partials/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
   </div>
   <?php endwhile; ?>
