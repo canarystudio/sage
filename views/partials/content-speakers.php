@@ -1,6 +1,7 @@
 <?php
 //  check for options
   $show_speaker_bio = get_field('event_link_speaker_bio', 'option');
+  $link_to_speaker_single = get_field('event_link_to_speaker_single', 'option');
 
   ?>
 
@@ -9,7 +10,7 @@
     <?php
 
     // primary speaker photo
-    $placeholder_image = '';
+    $placeholder_image = '<div><svg xmlns="http://www.w3.org/2000/svg" width="585" height="585" viewBox="0 0 585 585" class="img-fluid"><title>' . $speaker_name . '</title><rect width="585" height="585" style="fill:#fff"/><path d="M561,585c0-108.91-63.5-200.62-155.89-246.46,34.64-28.67,51.95-74.52,51.95-120.31C457.06,126.52,382,52,289.59,52S122.11,126.52,122.11,218.23c0,45.84,23.11,91.69,57.75,120.31C87.47,384.38,24,476.09,24,585" style="fill:#eff2f4"/></svg></div>';
 
     // if has image
     if (get_field('speaker_image', $speaker)) {
@@ -43,21 +44,29 @@
     ?>
     <?php
     if ( is_archive() ) {
-      get_template_part('views/partials/content-speakers-modal');
+      if ($show_speaker_bio) {
+        get_template_part('views/partials/content-speakers-modal');
+      }
     };
     ?>
 
     <div class="card-body">
       <p class="speaker-name mb-0 font-sm">
-      <?php if (get_field('speaker_title', $speaker)) { ?>
-      <?php the_field('speaker_title', $speaker); ?>
-      <?php }; ?>
-      <?php if (get_field('speaker_first_name', $speaker)) { ?>
-      <?php the_field('speaker_first_name', $speaker); ?>
-      <?php }; ?>
-      <?php if (get_field('speaker_last_name', $speaker)) { ?>
-      <?php the_field('speaker_last_name', $speaker); ?>
-      <?php }; ?>
+        <?php if ($link_to_speaker_single) { ?>
+        <a href="<?php the_permalink(); ?>">
+        <?php }; ?>
+          <?php if (get_field('speaker_title', $speaker)) { ?>
+          <?php the_field('speaker_title', $speaker); ?>
+          <?php }; ?>
+          <?php if (get_field('speaker_first_name', $speaker)) { ?>
+          <?php the_field('speaker_first_name', $speaker); ?>
+          <?php }; ?>
+          <?php if (get_field('speaker_last_name', $speaker)) { ?>
+          <?php the_field('speaker_last_name', $speaker); ?>
+          <?php }; ?>
+        <?php if ($link_to_speaker_single) { ?>
+        </a>
+        <?php }; ?>
       </p>
 
       <?php if ( get_field('speaker_position', $speaker) ) : ?>
