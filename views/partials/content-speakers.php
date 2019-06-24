@@ -7,41 +7,8 @@
 
   <div class="card card-speaker w-100">
 
-    <?php
+    <?php get_template_part('views/partials/content-speakers/speaker-image'); ?>
 
-    // primary speaker photo
-    $placeholder_image = '<div><svg xmlns="http://www.w3.org/2000/svg" width="585" height="585" viewBox="0 0 585 585" class="img-fluid"><title>' . $speaker_name . '</title><rect width="585" height="585" style="fill:#fff"/><path d="M561,585c0-108.91-63.5-200.62-155.89-246.46,34.64-28.67,51.95-74.52,51.95-120.31C457.06,126.52,382,52,289.59,52S122.11,126.52,122.11,218.23c0,45.84,23.11,91.69,57.75,120.31C87.47,384.38,24,476.09,24,585" style="fill:#eff2f4"/></svg></div>';
-
-    // if has image
-    if (get_field('speaker_image', $speaker)) {
-      $speaker_name = get_field(speaker_first_name) . " " . get_field(speaker_last_name);
-      $attachment_id = get_field('speaker_image', $speaker);
-      $size = "thumbnail"; // (thumbnail, medium, large, full or custom size)
-      $icon = "true";
-      $attr = array(
-        'class' => "card-img-top h-auto",
-        'alt' => $speaker_name,
-      );
-
-      // get image src
-      $image_attributes = wp_get_attachment_image_src( $attachment_id );
-
-      // check if file has a src (not broken)
-      if ( $image_attributes[0] ) {
-        // return correct image
-        echo wp_get_attachment_image( $attachment_id, $size, $icon, $attr );
-      } else {
-        // if file is broken, return default image
-        echo $placeholder_image;
-      }
-
-    // if has no attachment at all, return default image
-
-    } else {
-        echo $placeholder_image;
-    };
-
-    ?>
     <?php
     if ( is_archive() ) {
       if ($show_speaker_bio) {

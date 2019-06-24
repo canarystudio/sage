@@ -7,6 +7,13 @@
 
   //  check for options
   $event_option_speaker_order_alpha_surname = get_field('event_option_speaker_order_alpha_surname', 'option');
+  $event_option_speaker_size = get_field('event_option_speaker_size', 'option');
+
+  if ( !$event_option_speaker_size ) {
+    $event_option_speaker_size_cols = ' col-sm-4 col-md-3 col-lg-2';
+  } else {
+    $event_option_speaker_size_cols = ' ' . $event_option_speaker_size;
+  };
 ?>
 
 <div class="px-4 py-10 px-sm-8 pt-sm-8 pb-sm-3 ">
@@ -36,7 +43,7 @@
 
   ?>
   <?php while (have_posts()) : the_post(); ?>
-  <div class="col-sm-4 col-md-3 col-lg-2 d-flex px-sm-1 mb-3">
+  <div class="d-flex px-sm-1 mb-3<?php echo $event_option_speaker_size_cols; ?>">
     <?php get_template_part('views/partials/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
   </div>
   <?php endwhile; ?>
