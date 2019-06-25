@@ -16,7 +16,7 @@
   };
 ?>
 
-<div class="px-4 py-10 px-sm-8 pt-sm-8 pb-sm-3 ">
+<div class="primary-content container-xl px-cw py-4 py-sm-8">
 <?php get_template_part('views/partials/page-header', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 
 
