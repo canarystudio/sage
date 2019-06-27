@@ -87,7 +87,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_53bc07dcf9112",
+                        "field": "field_53bc07a7f9111",
                         "operator": "==",
                         "value": "attachment"
                     }
@@ -104,19 +104,40 @@
                 "paper_or_rapid_poster": "Paper Presentation or Five Minute Rapid Poster Presentation",
                 "panel": "Panel"
             },
+            "allow_null": 0,
             "other_choice": 0,
-            "save_other_choice": 0,
             "default_value": "",
             "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5d14d6baa0489",
+            "label": "Presentation Category",
+            "name": "presentation_stream",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
             "allow_null": 0,
+            "other_choice": 1,
+            "save_other_choice": 1,
+            "default_value": "",
+            "layout": "vertical",
             "return_format": "value"
         },
         {
-            "key": "field_5583b76552a78",
-            "label": "Panel?",
-            "name": "panel",
-            "type": "true_false",
-            "instructions": "If checked, this will show as a 'panel' and the primary speaker will be marked as 'facilitator'.",
+            "key": "field_5d14d629a0488",
+            "label": "Supporting Document",
+            "name": "presentation_supporting",
+            "type": "file",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -124,30 +145,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_56fdeb9482c10",
-            "label": "Co-Presenters?",
-            "name": "co_presenters",
-            "type": "true_false",
-            "instructions": "If checked, this will show all speakers (primary and secondary) on the program table.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -167,5 +169,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1544158086
+    "modified": 1561646846
 }
