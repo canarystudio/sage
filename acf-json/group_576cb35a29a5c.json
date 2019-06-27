@@ -84,15 +84,7 @@
             "type": "radio",
             "instructions": "Please choose the type of presentation:",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_53bc07a7f9111",
-                        "operator": "==",
-                        "value": "attachment"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -169,5 +161,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561646846
+    "modified": 1561647185
 }
