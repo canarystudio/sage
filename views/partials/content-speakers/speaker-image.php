@@ -2,6 +2,13 @@
 $event_option_speaker_thumbnail_width = get_field('event_option_speaker_thumbnail_width', 'option');
 $event_option_speaker_thumbnail_height = get_field('event_option_speaker_thumbnail_height', 'option');
 $event_option_speaker_thumbnail_ratio = $event_option_speaker_thumbnail_height / $event_option_speaker_thumbnail_width * 100;
+$event_option_speaker_shape = get_field('event_option_speaker_shape', 'option');
+
+if ( $event_option_speaker_shape == 'circle' ) {
+  $event_option_speaker_shape_class = 'rounded-circle';
+} else {
+  $event_option_speaker_shape_class = '';
+};
 ?>
 <div class="card-speaker-img">
   <?php
@@ -16,7 +23,7 @@ $event_option_speaker_thumbnail_ratio = $event_option_speaker_thumbnail_height /
       $size = 'speaker-thumbnail'; // (thumbnail, medium, large, full or custom size)
       $icon = "true";
       $attr = array(
-        'class' => "img-fluid h-auto",
+        'class' => "img-fluid h-auto " . $event_option_speaker_shape_class,
         'alt'   => $speaker_name,
       );
 

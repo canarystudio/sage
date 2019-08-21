@@ -8,6 +8,7 @@
   //  check for options
   $event_option_speaker_order_alpha_surname = get_field('event_option_speaker_order_alpha_surname', 'option');
   $event_option_speaker_size = get_field('event_option_speaker_size', 'option');
+  $event_option_speaker_layout = get_field('event_option_speaker_layout', 'option');
 
   if ( !$event_option_speaker_size ) {
     $event_option_speaker_size_cols = ' col-sm-4 col-md-3 col-lg-2';
@@ -44,7 +45,12 @@
   ?>
   <?php while (have_posts()) : the_post(); ?>
   <div class="d-flex px-sm-1 mb-3<?php echo $event_option_speaker_size_cols; ?>">
-    <?php get_template_part('views/partials/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+
+  <?php if ( $event_option_speaker_layout == 'vertical' ) { ?>
+    <?php get_template_part('views/partials/content-speakers'); ?>
+  <?php } else { ?>
+    <?php get_template_part('views/partials/content-speakers-horizontal'); ?>
+  <?php }; ?>
   </div>
   <?php endwhile; ?>
 </div>
