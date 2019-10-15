@@ -17,7 +17,12 @@ if ( $event_option_speaker_shape == 'circle' ) {
 
     // if has image
   if (get_field('speaker_image', $speaker)) {
-    $speaker_name = get_field(speaker_first_name) . " " . get_field(speaker_last_name);
+
+    if (get_field('speaker_first_name', $speaker)) {
+      $speaker_name = get_field( 'speaker_first_name' ) . " " . get_field( 'speaker_last_name' );
+    } else {
+      $speaker_name = '';
+    }
 
     $attachment_id = get_field('speaker_image', $speaker);
       $size = 'speaker-thumbnail'; // (thumbnail, medium, large, full or custom size)
