@@ -1,24 +1,20 @@
  <article <?php post_class('container'); ?>>
 
 
-    <header class="pb-4 mb-4 border-bottom">
-      <h3 class="mb-4 w-75"><?php the_title(); ?></h3>
+   <header class="pb-4 mb-4 border-bottom">
+     <h3 class="mb-4 w-75"><?php the_title(); ?></h3>
 
-      <?php if ( get_field('presentation_abstract_text') ) : ?>
-      <p><?php echo get_field('presentation_abstract_text'); ?></p>
-      <?php endif; ?>
+   </header>
 
-    </header>
-
-    <?php
+   <?php
       // primary speaker
       $speakers = get_field('presentation_primary_speaker');
       if( $speakers ) {
         foreach( $speakers as $speaker) {
     ?>
-    <div class="row mb-4 pb-3 border-bottom">
+   <div class="row mb-4 pb-3 border-bottom">
 
-      <?php
+     <?php
       // primary speaker photo
         if (get_field('speaker_image', $speaker)) {
           $attachment_id = get_field('speaker_image', $speaker);
@@ -31,41 +27,41 @@
         };
       ?>
 
-      <div class="col">
+     <div class="col">
 
-        <h4 class="text-primary m-0">
-          <a href="<?php the_permalink($speaker); ?>">
-            <?php the_field('speaker_first_name', $speaker); ?>
-            <?php the_field('speaker_last_name', $speaker); ?>
-          </a>
-        </h4>
-        <p class="mb-3">
-          <strong>
-          <?php the_field('speaker_organisation_affiliation', $speaker); ?><br/>
-          <?php the_field('speaker_position', $speaker); ?><br/>
-          </strong>
-        </p>
+       <h4 class="text-primary m-0">
+         <a href="<?php the_permalink($speaker); ?>">
+           <?php the_field('speaker_first_name', $speaker); ?>
+           <?php the_field('speaker_last_name', $speaker); ?>
+         </a>
+       </h4>
+       <p class="mb-3">
+         <strong>
+           <?php the_field('speaker_organisation_affiliation', $speaker); ?><br />
+           <?php the_field('speaker_position', $speaker); ?><br />
+         </strong>
+       </p>
 
-        <?php if ( get_field('speaker_bio', $speaker) ) : ?>
-          <?php echo get_field('speaker_bio', $speaker); ?>
-        <?php endif; ?>
+       <?php if ( get_field('speaker_bio', $speaker) ) : ?>
+       <?php echo get_field('speaker_bio', $speaker); ?>
+       <?php endif; ?>
 
-      </div>
-    </div>
-    <?php
+     </div>
+   </div>
+   <?php
         };
       };
     ?>
 
-    <?php
+   <?php
       // secondary speaker
       $speakers = get_field('presentation_speakers');
       if( $speakers ) {
         foreach( $speakers as $speaker) {
     ?>
-    <div class="row mb-4 pb-3 border-bottom">
+   <div class="row mb-4 pb-3 border-bottom">
 
-      <?php
+     <?php
       // primary speaker photo
         if (get_field('speaker_image', $speaker)) {
           $attachment_id = get_field('speaker_image', $speaker);
@@ -78,31 +74,39 @@
         };
       ?>
 
-      <div class="col">
+     <div class="col">
 
-        <h4 class="text-primary m-0">
-          <a href="<?php the_permalink(); ?>">
-            <?php the_field('speaker_first_name', $speaker); ?>
-            <?php the_field('speaker_last_name', $speaker); ?>
-          </a>
-        </h4>
-        <p class="mb-3">
-          <strong>
-          <?php the_field('speaker_organisation_affiliation', $speaker); ?><br/>
-          <?php the_field('speaker_position', $speaker); ?><br/>
-          </strong>
-        </p>
+       <h4 class="text-primary m-0">
+         <a href="<?php the_permalink(); ?>">
+           <?php the_field('speaker_first_name', $speaker); ?>
+           <?php the_field('speaker_last_name', $speaker); ?>
+         </a>
+       </h4>
+       <p class="mb-3">
+         <strong>
+           <?php the_field('speaker_organisation_affiliation', $speaker); ?><br />
+           <?php the_field('speaker_position', $speaker); ?><br />
+         </strong>
+       </p>
 
-        <?php if ( get_field('speaker_bio', $speaker) ) : ?>
-          <?php echo get_field('speaker_bio', $speaker); ?>
-        <?php endif; ?>
+       <?php if ( get_field('speaker_bio', $speaker) ) : ?>
+       <?php echo get_field('speaker_bio', $speaker); ?>
+       <?php endif; ?>
 
-      </div>
-    </div>
-    <?php
+     </div>
+   </div>
+   <?php
         };
       };
     ?>
 
 
-  </article>
+
+   <?php if ( get_field('presentation_abstract_text') ) : ?>
+   <div class="abstract-text">
+     <p><?php echo get_field('presentation_abstract_text'); ?></p>
+   </div>
+   <?php endif; ?>
+
+
+ </article>
